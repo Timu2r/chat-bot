@@ -55,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (chatInput && inputContainer) {
         chatInput.addEventListener('focus', () => {
-            console.log('chatInput focused');
             inputContainer.classList.add('active'); 
-            console.log('inputContainer active class added');
         });
 
         chatInput.addEventListener('blur', () => {
