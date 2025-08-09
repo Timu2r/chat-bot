@@ -1,0 +1,465 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.section-price {
+	background: linear-gradient(179.67deg, #c8e0fb 23.91%, #4a93d7 67.93%);
+	padding: 80px 0;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-price {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+}
+
+h1 {
+	color: white;
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 60px;
+	text-align: left;
+}
+
+/* Pricing Cards */
+.pricing-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+	margin-bottom: 80px;
+}
+
+.pricing-card {
+	background: linear-gradient(180deg, #012547 0%, #025aad 100%);
+	border-radius: 20px;
+	padding: 40px 30px;
+	text-align: center;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	width: 360px;
+	height: 474px;
+	max-width: 100%;
+	transition: all 0.3s;
+}
+
+.pricing-card.standard {
+	background: linear-gradient(
+		180deg,
+		#58aeff 0%,
+		rgba(45, 92, 135, 0.72) 128.06%
+	);
+	color: #012c55;
+}
+
+.pricing-info {
+	border-bottom: 1px solid #ffffff;
+	margin-bottom: 20px;
+}
+
+.plan-name {
+font-family: "Inter";
+font-weight: 400;
+font-size: 40px;
+line-height: 46px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+
+}
+
+.standard .plan-name {
+	color: #012c55;
+}
+.basic .plan-name {
+	color: #fff;
+}
+.pro .plan-name {
+	color: #fff;
+}
+
+.price {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.price.basic {
+	color: #ffbf36;
+	transition: all 0.3s;
+}
+.price.standard {
+	color: #ffbf36;
+	transition: all 0.3s;
+}
+.price.pro {
+	color: #eb8d09;
+	transition: all 0.3s;
+}
+
+.features {
+	list-style: none;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+.features li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.standard .features li {
+	color: #e1e9f1;
+}
+
+.check-icon {
+    position: relative;
+    bottom: 10px;
+	width: 20px;
+	height: 20px;
+	margin-right: 12px;
+	fill: #58aeff;
+}
+
+.standard .check-icon {
+	fill: #ffbf36;
+}
+
+.select-btn {
+	background: #ffffff;
+	border: 2px solid #e1e9f1;
+	border-radius: 25px;
+	padding: 12px 30px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	width: 100%;
+	color: #012547;
+}
+
+.standard .select-btn {
+	background: #ffffff;
+	color: #012547;
+}
+
+.select-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.basic .select-btn:hover {
+	background: #ffbf36;
+	border-color: #ffbf36;
+	color: #012547;
+}
+
+.standard .select-btn:hover {
+	background: #012547;
+	border-color: #012547;
+	color: #ffffff;
+}
+
+.pro .select-btn:hover {
+	background: #ffbf36;
+	border-color: #ffbf36;
+	color: #012547;
+}
+
+/* Services Grid */
+.services-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 40px;
+	margin-bottom: 80px;
+}
+
+.service-column h3 {
+	color: #ffbf36;
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.service-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.checkbox {
+	min-width: 18px;
+	height: 18px;
+	border: 2px solid #9bbfe8;
+	border-radius: 4px;
+	margin-right: 12px;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.checkbox.checked {
+	background: #ffbf36;
+	border-color: #ffbf36;
+}
+
+.checkbox.checked::after {
+	content: '✓';
+	position: absolute;
+	top: -2px;
+	left: 2px;
+	color: #012547;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.service-text {
+	color: #e1e9f1;
+	font-size: 14px;
+}
+
+/* Selected Services Card */
+.selected-services {
+	background: linear-gradient(180deg, #012547 0%, #025AAD 100%);
+
+	border-radius: 20px;
+	padding: 30px;
+	color: #ffffff;
+}
+
+.selected-services h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.services-count {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+	color: #9bbfe8;
+	margin-bottom: 20px;
+}
+
+.total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.total-label {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.total-price {
+	font-size: 24px;
+	font-weight: 700;
+	color: #ffbf36;
+}
+
+.goto-form-btn {
+	background: #ffffff;
+	border: none;
+	border-radius: 25px;
+	padding: 12px 25px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: #012547;
+}
+
+.goto-form-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	background: #ffbf36;
+}
+
+/* Chat Bot Form */
+.chatbot-form {
+	background: linear-gradient(0deg, #012547 5.61%, #0257a8 87.29%);
+	border-radius: 20px;
+	padding: 40px;
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.form-content {
+	flex: 1;
+}
+
+.form-title {
+	color: #ffbf36;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.form-politixs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.politics {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-input {
+	width: 85%;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid #5a71a0;
+	padding: 12px 0;
+	color: #ffffff;
+	font-size: 16px;
+	transition: border-color 0.3s ease;
+}
+
+.form-input::placeholder {
+	color: #9bbfe8;
+}
+
+.form-input:focus {
+	outline: none;
+	border-bottom-color: #ffbf36;
+}
+
+.test-btn {
+	background: #ffffff;
+	border: none;
+	border-radius: 25px;
+	padding: 15px 40px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: #012547;
+}
+
+.test-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+	background: #ffbf36;
+}
+
+.privacy-note {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 20px;
+	font-size: 12px;
+	color: #9bbfe8;
+	gap: 8px;
+}
+
+.privacy-checkbox {
+	width: 16px;
+	height: 16px;
+	border: 1px solid #5a71a0;
+	border-radius: 3px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+
+.chatbot-form {
+	background: linear-gradient(0deg, #012547 5.61%, #0257a8 87.29%);
+	border-radius: 20px;
+	padding: 40px;
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	position: relative;
+}
+
+.form-content {
+	flex: 1;
+	position: relative; 
+}
+
+.robot-No2-img {
+	position: absolute;
+	top: 135px;
+	right: -40px;
+	z-index: 10; 
+	pointer-events: none;
+}
+
+.bot-avatar {
+	width: 120px;
+	height: 120px;
+	background: rgba(255, 191, 54, 0.1);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 48px;
+	color: #ffbf36;
+	border: 2px solid #ffbf36;
+}
+
+@media (max-width: 768px) {
+	.services-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.chatbot-form {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 32px;
+		text-align: center;
+	}
+}
+
+/* Animation for buttons */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.select-btn:active,
+.test-btn:active,
+.goto-form-btn:active {
+	animation: pulse 0.2s ease-in-out;
+}
+
+/* Additional ripple animation */
+@keyframes ripple {
+	to {
+		transform: scale(4);
+		opacity: 0;
+	}
+}
