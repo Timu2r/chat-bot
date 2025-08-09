@@ -141,7 +141,6 @@
 	white-space: nowrap;
 }
 
-/* Hover tooltip for orbit items */
 .orbit-tooltip {
 	position: absolute;
 	top: -80px;
@@ -179,7 +178,7 @@
 	visibility: visible;
 }
 
-/* Positioning for orbit items - circular arrangement like clock positions */
+
 .motivation {
 	top: 50px;
 	left: 50.2%;
@@ -211,7 +210,6 @@
 	z-index: 2;
 }
 
-/* Connection lines from center to each orbit item */
 .connection-line {
 	position: absolute;
 	background: #58aeff;
@@ -267,7 +265,6 @@
 	z-index: 1;
 }
 
-/* Inner orbit circles */
 .inner-orbit {
 	position: absolute;
 	border: 2px solid #58aeff;
@@ -295,7 +292,6 @@
 	z-index: 2;
 }
 
-/* Small dots on orbits */
 .orbit-dot {
 	position: absolute;
 	width: 10px;

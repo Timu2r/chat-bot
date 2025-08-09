@@ -174,7 +174,6 @@ vertical-align: middle;
 	color: #012547;
 }
 
-/* Services Grid */
 .services-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -229,7 +228,6 @@ vertical-align: middle;
 	font-size: 14px;
 }
 
-/* Selected Services Card */
 .selected-services {
 	background: linear-gradient(180deg, #012547 0%, #025AAD 100%);
 
@@ -288,7 +286,6 @@ vertical-align: middle;
 	background: #ffbf36;
 }
 
-/* Chat Bot Form */
 .chatbot-form {
 	background: linear-gradient(0deg, #012547 5.61%, #0257a8 87.29%);
 	border-radius: 20px;
@@ -437,7 +434,6 @@ vertical-align: middle;
 	}
 }
 
-/* Animation for buttons */
 @keyframes pulse {
 	0% {
 		transform: scale(1);
@@ -456,7 +452,6 @@ vertical-align: middle;
 	animation: pulse 0.2s ease-in-out;
 }
 
-/* Additional ripple animation */
 @keyframes ripple {
 	to {
 		transform: scale(4);

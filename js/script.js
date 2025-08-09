@@ -7,7 +7,10 @@ function toggleService(element) {
 			function updateServiceCount() {
 				const checkedServices =
 					document.querySelectorAll('.checkbox.checked').length
-				document.getElementById('serviceCount').textContent = checkedServices
+				const serviceCountElement = document.querySelector('.services-count span');
+				if (serviceCountElement) {
+					serviceCountElement.textContent = checkedServices;
+				}
 
 				const totalPrice = checkedServices * 500
 				document.getElementById('totalPrice').textContent = totalPrice + '₽'
@@ -43,3 +46,34 @@ function toggleService(element) {
 			})
 
 			updateServiceCount()
+
+document.addEventListener('DOMContentLoaded', () => {
+    const chatInput = document.getElementById('chatInput');
+    const searchButton = document.querySelector('.btn-search');
+    const inputContainer = document.querySelector('.input-container'); 
+    const dropMenu = document.querySelector('.input-container .drop-menu');
+
+    if (chatInput && inputContainer) {
+        chatInput.addEventListener('focus', () => {
+            console.log('chatInput focused');
+            inputContainer.classList.add('active'); 
+            console.log('inputContainer active class added');
+        });
+
+        chatInput.addEventListener('blur', () => {
+            console.log('chatInput blurred');
+
+            setTimeout(() => {
+                inputContainer.classList.remove('active');
+                console.log('inputContainer active class removed');
+            }, 100);
+        });
+    }
+
+    if (searchButton && inputContainer) {
+        searchButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            inputContainer.classList.toggle('active'); 
+        });
+    }
+});

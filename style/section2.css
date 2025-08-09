@@ -168,57 +168,56 @@ body {
 	object-fit: contain;
 }
 
-/* Позиционирование иконок приложений точно как на макете */
 .app-icon:nth-child(1) {
 	top: -40px;
 	right: 80px;
-} /* WhatsApp */
+} 
 .app-icon:nth-child(2) {
 	bottom: 80px;
 	right: 90px;
-} /* Telegram */
+}
 .app-icon:nth-child(3) {
 	top: 160px;
 	right: 50px;
-} /* VK */
+} 
 .app-icon:nth-child(4) {
 	top: -50px;
 	right: 180px;
-} /* Wildberries */
+}
 .app-icon:nth-child(5) {
 	top: 60px;
 	right: 90px;
-} /* OZON */
+} 
 .app-icon:nth-child(6) {
 	bottom: 160px;
 	right: 140px;
-} /* Instagram */
+}
 .app-icon:nth-child(7) {
 	bottom: 50px;
 	left: 80px;
-} /* Avito */
+} 
 .app-icon:nth-child(8) {
 	top: 200px;
 	left: 250px;
-} /* Bitrix24 */
+}
 .app-icon:nth-child(9) {
 	top: 180px;
 	left: 0px;
-} /* AmoCRM */
+} 
 .app-icon:nth-child(10) {
 	top: -30px;
 	left: 150px;
-} /* Klenty */
+}
 .app-icon:nth-child(11) {
 	top: 0px;
 	left: 70px;
-} /* Excel */
+}
 .app-icon:nth-child(12) {
 	top: 90px;
 	left: 30px;
-} /* Google */
+}
 
-/* Анимация плавающих иконок */
+
 .app-icon {
 	animation: float 3s ease-in-out infinite;
 }
@@ -241,7 +240,6 @@ body {
 	}
 }
 
-/* Адаптивность */
 @media (max-width: 1200px) {
 	.screen-content {
 		padding: 30px 40px;
