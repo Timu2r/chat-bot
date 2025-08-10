@@ -14,6 +14,7 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="style/header.css" />
 		<link rel="stylesheet" href="style/style.css" />
 		<link rel="stylesheet" href="style/section2.css" />
 		<link rel="stylesheet" href="style/section3.css" />
@@ -27,7 +28,7 @@
 				<div class="container">
 					<nav class="navbar navbar-expand-lg">
 						<p class="navbar-brand">
-							<img src="./assets/ic_1.svg" alt="logo" /> <span>VALLES</span>
+							<img src="./assets/logo.svg" alt="logo" />
 						</p>
 						<button
 							class="navbar-toggler"
@@ -135,21 +136,24 @@
 								<p>Интеграции с CRM/ сайтом, экосистемами</p>
 							</div>
 						</div>
-
-						<img
-							src="./assets/ChatGPT Image 28 июл. 2025 г., 11_44_26@2x 2.svg"
-							alt="Декоративная иконка"
-							class="decorative-icon"
-						/>
-						<img
-							src="./assets/Vector 73.svg"
-							alt="vector"
-							class="decorative-vector-icon"
-						/>
+						<div class="decorative-cont">
+							<img
+								src="./assets/ChatGPT Image 28 июл. 2025 г., 11_44_26@2x 2.svg"
+								alt="Декоративная иконка"
+								class="decorative-icon"
+							/>
+							<img
+								src="./assets/Vector 73.svg"
+								alt="vector"
+								class="decorative-vector-icon"
+							/>
+							<div class="decorative-tooltip">запустить игру</div>
+						</div>
 					</div>
 				</section>
 
 				<section class="section-avto">
+					<h1>Экосистема автоматизации</h1>
 					<div class="container-avto">
 						<div class="laptop-wrapper">
 							<img src="./assets/labtop.png" alt="laptop" class="laptop-img" />
@@ -157,8 +161,6 @@
 							<div class="screen-background"></div>
 
 							<div class="screen-content">
-								<h1>Экосистема автоматизации</h1>
-
 								<div class="avto-list">
 									<div class="avto-item">
 										<div class="avto-icon">
@@ -316,30 +318,32 @@
 						<div class="inner-orbit orbit-2"></div>
 						<div class="inner-orbit orbit-3"></div>
 
-						<div class="connection-line line-1"></div>
-						<div class="connection-line line-2"></div>
-						<div class="connection-line line-3"></div>
-						<div class="connection-line line-4"></div>
-						<div class="connection-line line-5"></div>
-
 						<div class="back-circle-lock">
 							<div class="back-circle">
 								<div class="center-circle">
-									<img src="./assets/Vector 6.svg" alt="Vector 6" />
+									<div class="orbit-center-img-cont">
+										<img src="./assets/Vector 6.svg" alt="Vector 6" />
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="orbit-item motivation">
-							<img src="./assets/Vector 2.svg" alt="Vector 2" />
-							<div class="orbit-label">Мотивация</div>
+							<div class="orbit-img-cont">
+								<img src="./assets/Vector 2.svg" alt="Vector 2" />
+							</div>
+							<div class="connection-line"></div>
+							<div class="orbit-label">Магазины</div>
 							<div class="orbit-tooltip">
 								Бот поможет купить,<br />вернуть, уточнить
 							</div>
 						</div>
 
 						<div class="orbit-item b2b">
-							<img src="./assets/Vector 5.svg" alt="Vector =" />
+							<div class="orbit-img-cont">
+								<img src="./assets/Vector 5.svg" alt="Vector 5" />
+							</div>
+							<div class="connection-line"></div>
 							<div class="orbit-label">B2B</div>
 							<div class="orbit-tooltip">
 								Бот поможет купить,<br />вернуть, уточнить
@@ -347,7 +351,10 @@
 						</div>
 
 						<div class="orbit-item services">
-							<img src="./assets/Vector.svg" alt="Vector" />
+							<div class="orbit-img-cont">
+								<img src="./assets/Vector.svg" alt="Vector" />
+							</div>
+							<div class="connection-line"></div>
 							<div class="orbit-label">Услуги</div>
 							<div class="orbit-tooltip">
 								Бот поможет купить,<br />вернуть, уточнить
@@ -355,7 +362,10 @@
 						</div>
 
 						<div class="orbit-item hr">
-							<img src="./assets/Vector 4.svg" alt="Vector 4" />
+							<div class="orbit-img-cont">
+								<img src="./assets/Vector 4.svg" alt="Vector 4" />
+							</div>
+							<div class="connection-line"></div>
 							<div class="orbit-label">HR</div>
 							<div class="orbit-tooltip">
 								Бот поможет купить,<br />вернуть, уточнить
@@ -363,7 +373,10 @@
 						</div>
 
 						<div class="orbit-item support">
-							<img src="./assets/Vector 3.svg" alt="Vector 3" />
+							<div class="orbit-img-cont">
+								<img src="./assets/Vector 3.svg" alt="Vector 3" />
+							</div>
+							<div class="connection-line"></div>
 							<div class="orbit-label">Поддержка</div>
 							<div class="orbit-tooltip">
 								Бот поможет купить,<br />вернуть, уточнить
@@ -729,5 +742,6 @@
 			</footer>
 		</div>
 		<script src="./js/script.js"></script>
+		<script src="./js/icon-animation.js"></script>
 	</body>
 </html>

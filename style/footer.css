@@ -60,21 +60,3 @@ footer {
     filter: grayscale(0%);
 }
 
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .fot {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .chats {
-        margin-top: 10px;
-    }
-}

@@ -59,8 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         chatInput.addEventListener('blur', () => {
-            console.log('chatInput blurred');
-
             setTimeout(() => {
                 inputContainer.classList.remove('active');
                 console.log('inputContainer active class removed');
@@ -75,3 +73,75 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+ document.addEventListener('DOMContentLoaded', () => {
+            const centerCircle = document.querySelector('.center-circle');
+            const orbitItems = document.querySelectorAll('.orbit-item');
+            const orbitDots = document.querySelectorAll('.orbit-dot');
+
+            function updateConnectionLines() {
+                const centerRect = centerCircle.getBoundingClientRect();
+                const centerX = centerRect.left + centerRect.width / 2;
+                const centerY = centerRect.top + centerRect.height / 2;
+
+                orbitItems.forEach(item => {
+                    const line = item.querySelector('.connection-line');
+                    const itemRect = item.getBoundingClientRect();
+                    
+                    const itemX = itemRect.left + itemRect.width / 2;
+                    const itemY = itemRect.top + itemRect.height / 2;
+
+                    // Вычисляем расстояние между центрами
+                    const distance = Math.sqrt(
+                        Math.pow(centerX - itemX, 2) + Math.pow(centerY - itemY, 2)
+                    );
+
+                    // Вычисляем угол
+                    const angleRad = Math.atan2(centerY - itemY, centerX - itemX);
+                    const angleDeg = angleRad * 180 / Math.PI;
+
+                    // Позиционируем линию от центра элемента к центру круга
+                    line.style.width = `${distance}px`;
+                    line.style.transform = `rotate(${angleRad}rad)`;
+                    line.style.left = `${itemRect.width / 2}px`;
+                    line.style.top = `${itemRect.height / 2}px`;
+                });
+            }
+
+            // Остановка анимации при наведении на элементы
+            orbitItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    orbitItems.forEach(el => el.style.animationPlayState = 'paused');
+                    orbitDots.forEach(dot => dot.style.animationPlayState = 'paused');
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    orbitItems.forEach(el => el.style.animationPlayState = 'running');
+                    orbitDots.forEach(dot => dot.style.animationPlayState = 'running');
+                });
+            });
+
+            // Центр также останавливает анимацию
+            centerCircle.addEventListener('mouseenter', () => {
+                orbitItems.forEach(el => el.style.animationPlayState = 'paused');
+                orbitDots.forEach(dot => dot.style.animationPlayState = 'paused');
+            });
+
+            centerCircle.addEventListener('mouseleave', () => {
+                orbitItems.forEach(el => el.style.animationPlayState = 'running');
+                orbitDots.forEach(dot => dot.style.animationPlayState = 'running');
+            });
+
+            // Инициализация и постоянное обновление линий
+            function animate() {
+                updateConnectionLines();
+                requestAnimationFrame(animate);
+            }
+
+            // Также обновляем при ресайзе
+            window.addEventListener('resize', updateConnectionLines);
+            
+            // Запуск анимации
+            animate();
+        });

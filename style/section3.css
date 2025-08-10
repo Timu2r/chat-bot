@@ -1,3 +1,10 @@
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+
+/* Chatbot Section Styles */
 .chatbot-section {
 	padding: 80px 0;
 	text-align: center;
@@ -22,34 +29,6 @@
 	justify-content: center;
 }
 
-.help-tooltip {
-	position: absolute;
-	top: -5px;
-	left: 50%;
-	transform: translateX(-50%);
-	background: #ffffff;
-	padding: 8px 16px;
-	border-radius: 8px;
-	font-size: 14px;
-	color: #012547;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	border: 1px solid #9bbfe8;
-	white-space: nowrap;
-}
-
-.help-tooltip::after {
-	content: '';
-	position: absolute;
-	bottom: 60px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 0;
-	height: 0;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 6px solid #ffffff;
-}
-
 .center-circle {
 	position: absolute;
 	top: 50%;
@@ -64,11 +43,29 @@
 	justify-content: center;
 	z-index: 10;
 	transition: 0.5s all;
+	animation: center-vibrate 2s linear infinite;
 }
 
-.center-circle:hover{
-	box-shadow: 0 1px 20px #58aeff;
+@keyframes center-vibrate {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	25% {
+		transform: translate(-50%, -50%) rotate(2deg);
+	}
+	50% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	75% {
+		transform: translate(-50%, -50%) rotate(-2deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+}
 
+.center-circle:hover {
+	box-shadow: 0 1px 20px #58aeff;
 }
 
 .back-circle {
@@ -92,8 +89,8 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 186px;
-	height: 186px;
+	width: 190px;
+	height: 190px;
 	background: linear-gradient(180deg, #ffffff -290%, #94c3f7 230.81%);
 	border-radius: 50%;
 	display: flex;
@@ -111,17 +108,35 @@
 	position: absolute;
 	width: 90px;
 	height: 90px;
-	background: #012547;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0 6px 20px rgba(1, 37, 71, 0.2);
 	transition: 0.5s all;
+	top: 50%;
+	left: 50%;
+	margin-top: -45px;
+	margin-left: -45px;
+	transform-origin: center -230px;
+	z-index: 2;
+}
+
+.orbit-img-cont {
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background: #012547;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 99;
 }
 
 .orbit-item:hover {
 	box-shadow: 0 6px 20px #58aeff;
+	transform: scale(1.1);
 }
 
 .orbit-item img {
@@ -178,93 +193,6 @@
 	visibility: visible;
 }
 
-
-.motivation {
-	top: 50px;
-	left: 50.2%;
-	transform: translateX(-50%);
-	z-index: 2;
-}
-
-.b2b {
-	top: 198px;
-	right: 80px;
-	z-index: 2;
-}
-
-.services {
-	bottom: 130px;
-	right: 130px;
-	z-index: 2;
-}
-
-.hr {
-	bottom: 130px;
-	left: 140px;
-	z-index: 2;
-}
-
-.support {
-	top: 198px;
-	left: 80px;
-	z-index: 2;
-}
-
-.connection-line {
-	position: absolute;
-	background: #58aeff;
-	z-index: 1;
-}
-
-.line-1 {
-	left: 50%;
-	width: 3px;
-	height: 150px;
-	transform: translate(-50%, -100%);
-	transform-origin: bottom;
-	z-index: 1;
-}
-
-.line-2 {
-	top: 479px;
-	left: 303px;
-	width: 3px;
-	height: 140px;
-	transform: translate(-50%, -50%) rotate(44deg);
-	transform-origin: top;
-	z-index: 1;
-}
-
-.line-3 {
-	top: 382px;
-	left: 285px;
-	width: 3px;
-	height: 140px;
-	transform: translate(-50%, -50%) rotate(115deg);
-	transform-origin: top;
-	z-index: 1;
-}
-
-.line-4 {
-	top: 382px;
-	right: 280px;
-	width: 3px;
-	height: 140px;
-	transform: translate(-50%, -50%) rotate(245deg);
-	transform-origin: top;
-	z-index: 1;
-}
-
-.line-5 {
-	top: 476px;
-	right: 290px;
-	width: 3px;
-	height: 140px;
-	transform: translate(-50%, -50%) rotate(316deg);
-	transform-origin: top;
-	z-index: 1;
-}
-
 .inner-orbit {
 	position: absolute;
 	border: 2px solid #58aeff;
@@ -272,12 +200,13 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 99;
 }
 
 .orbit-1 {
 	width: 200px;
 	height: 200px;
-	z-index: 2;
+	z-index: 9;
 }
 
 .orbit-2 {
@@ -298,25 +227,526 @@
 	height: 10px;
 	background: #58aeff;
 	border-radius: 50%;
-	top: 50%;
-	left: 50%;
 	border: 2px solid #012547;
 	z-index: 3;
+	top: 50%;
+	left: 50%;
+	margin-top: -5px;
+	margin-left: -5px;
 }
 
+/* Анимация вращения для элементов */
+@keyframes orbit-rotation {
+	0% {
+		transform: rotate(0deg) translateX(250px) rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg) translateX(250px) rotate(-360deg);
+	}
+}
+
+/* Анимация для точек на первой орбите (100px радиус) */
+@keyframes orbit-1-rotation {
+	0% {
+		transform: rotate(0deg) translateX(100px) rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg) translateX(100px) rotate(-360deg);
+	}
+}
+
+/* Общие стили для вращающихся элементов */
+.orbit-item {
+	animation: orbit-rotation 20s linear infinite;
+}
+
+/* Распределение элементов с разными стартовыми позициями */
+.motivation {
+	animation-delay: 0s;
+}
+.support {
+	animation-delay: -4s;
+}
+.b2b {
+	animation-delay: -8s;
+}
+.hr {
+	animation-delay: -12s;
+}
+.services {
+	animation-delay: -16s;
+}
+
+/* Стили для точек на первой орбите */
+.orbit-dot {
+	animation: orbit-1-rotation 20s linear infinite;
+	transform-origin: center;
+}
+
+/* Распределение точек с задержками */
 .dot-1 {
-	transform: translate(-50%, -102px);
-	z-index: 3;
+	animation-delay: 0s;
 }
 .dot-2 {
-	transform: translate(82px, -52px);
+	animation-delay: -4s;
 }
 .dot-3 {
-	transform: translate(-68px, 70px);
+	animation-delay: -8s;
 }
 .dot-4 {
-	transform: translate(-92px, -52px);
+	animation-delay: -12s;
 }
 .dot-5 {
-	transform: translate(65px, 65px);
+	animation-delay: -16s;
+}
+
+/* Стили для соединительных линий */
+.connection-line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background: #58aeff;
+	transform-origin: 0 0;
+	z-index: 1;
+}
+
+/* Остановка анимации при наведении */
+.diagram-container:hover .orbit-item,
+.diagram-container:hover .orbit-dot {
+	animation-play-state: paused;
+}
+
+/* Адаптация chatbot section для ширины 1040px */
+@media screen and (max-width: 1040px) {
+	.chatbot-section {
+		padding: 60px 20px;
+	}
+	
+	.section-title {
+		font-size: 28px;
+		margin-bottom: 40px;
+	}
+	
+	.diagram-container {
+		width: 500px;
+		height: 500px;
+	}
+	
+	.center-circle {
+		width: 80px;
+		height: 80px;
+	}
+	
+	.center-circle img {
+		width: 40px;
+		height: 40px;
+	}
+	
+	.back-circle {
+		width: 120px;
+		height: 120px;
+	}
+	
+	.back-circle-lock {
+		width: 140px;
+		height: 140px;
+	}
+	
+	.orbit-item {
+		width: 70px;
+		height: 70px;
+		margin-top: -35px;
+		margin-left: -35px;
+		transform-origin: center -165px;
+	}
+	
+	.orbit-img-cont {
+		width: 70px;
+		height: 70px;
+	}
+	
+	.orbit-item img {
+		width: 26px;
+		height: 26px;
+	}
+	
+	.orbit-label {
+		top: 70px;
+		font-size: 12px;
+	}
+	
+	.orbit-tooltip {
+		font-size: 12px;
+		padding: 6px 12px;
+	}
+	
+	.orbit-1 {
+		width: 150px;
+		height: 150px;
+	}
+	
+	.orbit-2 {
+		width: 250px;
+		height: 250px;
+	}
+	
+	.orbit-3 {
+		width: 350px;
+		height: 350px;
+	}
+	
+	@keyframes orbit-rotation {
+		0% {
+			transform: rotate(0deg) translateX(175px) rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg) translateX(175px) rotate(-360deg);
+		}
+	}
+	
+	@keyframes orbit-1-rotation {
+		0% {
+			transform: rotate(0deg) translateX(75px) rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg) translateX(75px) rotate(-360deg);
+		}
+	}
+}
+
+/* Адаптация chatbot section для ширины 320px */
+@media screen and (max-width: 576px) {
+	.chatbot-section {
+		padding: 40px 15px;
+	}
+	
+	.section-title {
+		font-size: 22px;
+		margin-bottom: 30px;
+		line-height: 1.3;
+	}
+	
+	.diagram-container {
+		width: 300px;
+		height: 300px;
+	}
+	
+	.center-circle {
+		width: 60px;
+		height: 60px;
+	}
+	
+	.center-circle img {
+		width: 30px;
+		height: 30px;
+	}
+	
+	.back-circle {
+		width: 90px;
+		height: 90px;
+	}
+	
+	.back-circle-lock {
+		width: 110px;
+		height: 110px;
+	}
+	
+	.orbit-item {
+		width: 50px;
+		height: 50px;
+		margin-top: -25px;
+		margin-left: -25px;
+		transform-origin: center -100px;
+	}
+	
+	.orbit-img-cont {
+		width: 50px;
+		height: 50px;
+	}
+	
+	.orbit-item img {
+		width: 20px;
+		height: 20px;
+	}
+	
+	.orbit-label {
+		top: 50px;
+		font-size: 10px;
+	}
+	
+	.orbit-tooltip {
+		font-size: 10px;
+		padding: 4px 8px;
+		top: -60px;
+	}
+	
+	.orbit-tooltip::after {
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 4px solid #ffffff;
+		bottom: -4px;
+	}
+	
+	.orbit-1 {
+		width: 100px;
+		height: 100px;
+	}
+	
+	.orbit-2 {
+		width: 150px;
+		height: 150px;
+	}
+	
+	.orbit-3 {
+		width: 200px;
+		height: 200px;
+	}
+	
+	.orbit-dot {
+		width: 6px;
+		height: 6px;
+		margin-top: -3px;
+		margin-left: -3px;
+	}
+	
+	@keyframes orbit-rotation {
+		0% {
+			transform: rotate(0deg) translateX(100px) rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg) translateX(100px) rotate(-360deg);
+		}
+	}
+	
+	@keyframes orbit-1-rotation {
+		0% {
+			transform: rotate(0deg) translateX(50px) rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg) translateX(50px) rotate(-360deg);
+		}
+	}
+}
+
+/* Адаптация для очень маленьких экранов 320px */
+@media screen and (max-width: 320px) {
+	/* Chatbot section для 320px */
+	.chatbot-section {
+		padding: 30px 10px;
+	}
+	
+	.section-title {
+		font-size: 18px;
+		margin-bottom: 25px;
+	}
+	
+	.diagram-container {
+		width: 280px;
+		height: 280px;
+	}
+	
+	.center-circle {
+		width: 50px;
+		height: 50px;
+	}
+	
+	.center-circle img {
+		width: 25px;
+		height: 25px;
+	}
+	
+	.back-circle {
+		width: 75px;
+		height: 75px;
+	}
+	
+	.back-circle-lock {
+		width: 95px;
+		height: 95px;
+	}
+	
+	.orbit-item {
+		width: 45px;
+		height: 45px;
+		margin-top: -22.5px;
+		margin-left: -22.5px;
+		transform-origin: center -90px;
+	}
+	
+	.orbit-img-cont {
+		width: 45px;
+		height: 45px;
+	}
+	
+	.orbit-item img {
+		width: 18px;
+		height: 18px;
+	}
+	
+	.orbit-label {
+		top: 45px;
+		font-size: 9px;
+	}
+	
+	.orbit-1 {
+		width: 90px;
+		height: 90px;
+	}
+	
+	.orbit-2 {
+		width: 130px;
+		height: 130px;
+	}
+	
+	.orbit-3 {
+		width: 180px;
+		height: 180px;
+	}
+	
+	@keyframes orbit-rotation {
+		0% {
+			transform: rotate(0deg) translateX(90px) rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg) translateX(90px) rotate(-360deg);
+		}
+	}
+	
+	@keyframes orbit-1-rotation {
+		0% {
+			transform: rotate(0deg) translateX(45px) rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg) translateX(45px) rotate(-360deg);
+		}
+	}
+	.header {
+		height: 70px;
+		padding: 8px 0;
+	}
+	
+	.navbar-brand {
+		font-size: 16px;
+	}
+	
+	.nav-link {
+		padding: 10px 15px;
+		font-size: 14px;
+	}
+	.container-avto {
+		padding: 20px 10px;
+	}
+	
+	/* Скрываем изображение ноутбука на мобильных */
+	.laptop-img {
+		display: none;
+	}
+	
+	.screen-background {
+		position: relative;
+		width: 100%;
+		height: auto;
+		min-height: 600px;
+		top: 0;
+		left: 0;
+		transform: none;
+		border-radius: 8px;
+		margin-bottom: 20px;
+	}
+	
+	.screen-content {
+		position: relative;
+		width: 100%;
+		height: auto;
+		top: 0;
+		left: 0;
+		transform: none;
+		display: flex;
+		flex-direction: column;
+		padding: 20px 15px;
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 8px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	}
+	
+	.screen-content h1 {
+		font-size: 20px;
+		margin-bottom: 25px;
+		text-align: center;
+		line-height: 1.3;
+	}
+	
+	.avto-list {
+		margin-bottom: 30px;
+		gap: 12px;
+	}
+	
+	.avto-item {
+		width: 100%;
+		height: 50px;
+		gap: 12px;
+	}
+	
+	.avto-icon {
+		width: 45px;
+		height: 45px;
+		flex-shrink: 0;
+	}
+	
+	.avto-icon img {
+		width: 28px;
+		height: 26px;
+	}
+	
+	.avto-text {
+		font-size: 13px;
+		line-height: 1.4;
+		flex: 1;
+	}
+	
+	.integration-section {
+		align-items: center;
+	}
+	
+	.integration-item {
+		width: 100%;
+		height: 50px;
+		gap: 12px;
+		margin-bottom: 20px;
+	}
+	
+	.phone-container {
+		width: 280px;
+		height: 180px;
+		margin: 20px auto 0;
+	}
+	
+	.phone-img {
+		width: 120px;
+		height: auto;
+		bottom: 20px;
+		right: 20px;
+	}
+	
+	.app-icon {
+		width: 28px;
+		height: 27px;
+		border-radius: 8px;
+	}
+	
+	/* Позиционирование иконок приложений для мобильной версии */
+	.app-icon:nth-child(1) { top: 10px; right: 60px; }
+	.app-icon:nth-child(2) { top: 10px; right: 20px; }
+	.app-icon:nth-child(3) { top: 45px; right: 80px; }
+	.app-icon:nth-child(4) { top: 45px; right: 40px; }
+	.app-icon:nth-child(5) { top: 80px; right: 60px; }
+	.app-icon:nth-child(6) { top: 80px; right: 20px; }
+	.app-icon:nth-child(7) { top: 115px; right: 80px; }
+	.app-icon:nth-child(8) { top: 115px; right: 40px; }
+	.app-icon:nth-child(9) { top: 150px; right: 60px; }
+	.app-icon:nth-child(10) { top: 150px; right: 20px; }
+	.app-icon:nth-child(11) { top: 20px; left: 20px; }
+	.app-icon:nth-child(12) { top: 60px; left: 20px; }
 }
