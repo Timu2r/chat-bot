@@ -203,6 +203,7 @@ body {
 .decorative-cont {
 	position: relative;
 	display: inline-block;
+	z-index: 99;
 }
 
 .decorative-icon {
@@ -212,6 +213,7 @@ body {
 	z-index: 1;
 	transition: all 0.2s;
 	cursor: pointer;
+	z-index: 99;
 }
 
 .decorative-vector-icon {
