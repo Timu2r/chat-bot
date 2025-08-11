@@ -2,6 +2,7 @@
 	/* padding: 80px 0; */
 	background: linear-gradient(180deg, #94c3f7 6%, #ffffff 210.81%);
 	font-family: 'Inter', sans-serif;
+	box-sizing: border-box;
 }
 
 .map-bot h4 {
@@ -17,6 +18,7 @@
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
+	padding: 0 30px;
 }
 
 .map-cont {
@@ -24,7 +26,7 @@
 	width: 100%;
 	max-width: 1440px;
 	height: 800px;
-	margin: 0 auto; /* Center the map container */
+	margin: 0 auto; Center the map container
 }
 
 .vector-line {
@@ -95,24 +97,24 @@
 
 /* Base positions relative to .map-cont (desktop) - UPDATED */
 .metca-1 {
-	left: 140px;
-	top: 160px;
+	left: 9.72%;
+	top: 20%;
 }
 .metca-2 {
-	top: 180px;
-	left: 130px;
+	top: 22.5%;
+	left: 9.03%;
 }
 .metca-3 {
-	top: 180px;
-	left: 160px;
+	top: 22.5%;
+	left: 11.11%;
 }
 .metca-4 {
-	left: 120px;
-	top: 170px;
+	left: 8.33%;
+	top: 21.25%;
 }
 .metca-5 {
-	top: 90px;
-	left: 950px;
+	top: 11.25%;
+	left: 65.97%;
 }
 
 /* Individual icon, vector, span, p positions (desktop) - UPDATED */
@@ -529,24 +531,24 @@
 
 	/* .metca group positions (scaled) - UPDATED */
 	.metca-1 {
-		left: -12px;
+		left: -9px;
 		top: 60px;
 	}
 	.metca-2 {
 		top: 60px;
-		left: -25.5px;
+		left: -26px;
 	}
 	.metca-3 {
 		top: 54px;
 		left: -6px;
 	}
 	.metca-4 {
-		left: -40px;
-		top: 57px;
+		left: -30px;
+		top: 58px;
 	}
 	.metca-5 {
-		top: 39px;
-		left: 201px;
+		top: 40px;
+		left: 200px;
 	}
 
 	/* Individual icon, vector, span, p positions (scaled) - UPDATED */
@@ -619,7 +621,7 @@
 	.metca-4 p {
 		top: 120px;
 		left: 276px;
-		font-size: 8px;
+		font-size: 7.2px;
 	}
 
 	.main-vector5 {
@@ -635,4 +637,148 @@
 		top: 18px;
 		left: 54px;
 	}
+}
+
+@media screen and (max-width: 350px) {
+  /* Global scaling for 320px */
+  .map-bot {
+    padding: 16px 0; /* 80px * 0.2 */
+  }
+  .map-bot h4 {
+    font-size: 14px; /* 60px * 0.2 */
+    margin: 0 6px 10px 6px; /* 30px * 0.2, 50px * 0.2 */
+    line-height: 1.2;
+  }
+  .map-cont {
+    height: 160px; /* 800px * 0.2 */
+    max-width: 200px; /* 1000px * 0.2 */
+  }
+  .vector-line {
+    max-width: 200px; /* 1000px * 0.2 */
+  }
+  .metca-content {
+    width: 40px; /* 200px * 0.2 */
+    height: 40px; /* 200px * 0.2 */
+    margin-bottom: 4px; /* 20px * 0.2 */
+  }
+  .metca-content span {
+    font-size: 32px; /* 160px * 0.2 */
+  }
+  .metca-icon {
+    width: 24.8px; /* 124px * 0.2 */
+    height: 35.4px; /* 177px * 0.2 */
+  }
+  .metca p {
+    font-size: 6px; /* 30px * 0.2 */
+    line-height: 8px; /* 40px * 0.2 */
+  }
+
+  /* .metca group positions (scaled) */
+  .metca-1 {
+    left: 2px;
+    top: 37px; /* 80px * 0.6666 */
+  }
+  .metca-2 {
+    top: 40px; /* 70px * 0.6666 */
+    left: -18px;
+  }
+  .metca-3 {
+    top: 36px; /* 54px * 0.6666 */
+    left: -4px;
+  }
+  .metca-4 {
+    left: -20px; /* -50px * 0.6666 */
+    top: 38px; /* 57px * 0.6666 */
+  }
+  .metca-5 {
+    top: 29px; /* 60px * 0.6666 */
+    left: 135px; /* 170px * 0.6666 */
+  }
+
+  /* Individual icon, vector, span, p positions (scaled) */
+  .icon-1 {
+    top: -6px;
+    left: 24px;
+  }
+  .main-vector1 {
+    top: 2px;
+    left: 30.4px;
+    width: 13.3px; /* 20px * 0.6666 */
+  }
+  .metca-1 span {
+    top: -16px;
+  }
+  .metca-1 p {
+    left: 50px;
+    top: 4px;
+  }
+
+  .icon-2 {
+    top: 34px;
+    left: 96px;
+  }
+  .main-vector2 {
+    top: 40px;
+    left: 101.8px;
+    width: 13.3px;
+  }
+  .metca-2 span {
+    top: 22px;
+    left: 80px;
+  }
+  .metca-2 p {
+    top: 40px;
+    left: 122px;
+  }
+
+  .icon-3 {
+    top: 88px;
+    left: 10px;
+  }
+  .main-vector3 {
+    top: 94px;
+    left: 16px;
+    width: 13.3px;
+  }
+  .metca-3 span {
+    top: 76px;
+    left: -4px;
+  }
+  .metca-3 p {
+    top: 96px;
+    left: 36px;
+  }
+
+  .icon-4 {
+    top: 68px;
+    left: 156px;
+  }
+  .main-vector4 {
+    top: 74px;
+    left: 161px;
+    width: 15.3px; /* 23px * 0.6666 */
+  }
+  .metca-4 span {
+    top: 52px;
+    left: 140px;
+  }
+  .metca-4 p {
+    top: 80px;
+    left: 184px;
+    font-size: 4.8px; /* 7.2px * 0.6666 */
+  }
+
+  .main-vector5 {
+    top: 10px;
+    left: 13.3px; /* 20px * 0.6666 */
+    width: 13.3px;
+  }
+  .metca-5 span {
+    top: -6px;
+    left: -6px;
+  }
+  .metca-5 p {
+    top: 12px;
+    left: 36px;
+  }
 }

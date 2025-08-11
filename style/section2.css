@@ -18,7 +18,7 @@ body {
 .container-avto {
 	position: relative;
 	z-index: 2;
-	/* padding: 0px 30px; */
+	padding: 0px 30px;
 	max-width: 1440px;
 	margin: 0 auto;
 }
@@ -40,7 +40,8 @@ body {
 }
 
 .screen-content {
-	width: 930px;
+	width: 100%;
+	max-width: 930px;
 	height: 640px;
 	position: absolute;
 	top: 6%;
@@ -173,7 +174,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 40px;
-		margin-bottom: 38px;
+		margin-bottom: 60px;
 	}
 	.avto-list {
 		gap: 9px;
@@ -226,7 +227,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 38px;
-		margin-bottom: 36px;
+		margin-bottom: 60px;
 	}
 	.avto-list {
 		gap: 8px;
@@ -279,7 +280,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 36px;
-		margin-bottom: 34px;
+		margin-bottom: 60px;
 	}
 	.avto-list {
 		gap: 7px;
@@ -325,7 +326,6 @@ body {
 /* max-width 900px */
 @media screen and (max-width: 900px) {
 	.container-avto {
-		padding: 45px 15px;
 		width: 90%;
 	}
 	.laptop-img {
@@ -338,7 +338,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 28px;
-		margin-bottom: 45px;
+		margin-bottom: 60px;
 	}
 	.avto-item {
 		width: 290px;
@@ -382,7 +382,6 @@ body {
 		font-size: 14px;
 	}
 	.container-avto {
-		padding: 35px 10px;
 		width: 95%;
 	}
 	.laptop-img {
@@ -395,7 +394,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 24px;
-		margin-bottom: 35px;
+		margin-bottom: 60px;
 	}
 	.avto-item {
 		width: 225px;
@@ -439,7 +438,6 @@ body {
 /* max-width 800px */
 @media screen and (max-width: 800px) {
 	.container-avto {
-		padding: 20px 15px;
 		width: 90%;
 	}
 	.laptop-img {
@@ -452,7 +450,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 28px;
-		margin-bottom: 40px;
+		margin-bottom: 60px;
 	}
 	.avto-item {
 		width: 255px;
@@ -497,7 +495,6 @@ body {
 		font-size: 14px;
 	}
 	.container-avto {
-		padding: 35px 10px;
 		width: 95%;
 	}
 	.laptop-img {
@@ -510,7 +507,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 24px;
-		margin-bottom: 35px;
+		margin-bottom: 60px;
 	}
 	.avto-item {
 		width: 225px;
@@ -554,7 +551,6 @@ body {
 /* max-width 700px */
 @media screen and (max-width: 700px) {
 	.container-avto {
-		padding: 35px 10px;
 		width: 95%;
 	}
 	.laptop-img {
@@ -567,7 +563,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 24px;
-		margin-bottom: 35px;
+		margin-bottom: 60px;
 	}
 	.avto-item {
 		width: 225px;
@@ -618,7 +614,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 22px;
-		margin-bottom: 33px;
+		margin-bottom: 60px;
 	}
 	.avto-list {
 		gap: 4px;
@@ -663,7 +659,6 @@ body {
 /* max-width 600px */
 @media screen and (max-width: 600px) {
 	.container-avto {
-		padding: 30px 10px;
 		width: 95%;
 	}
 	.laptop-img {
@@ -677,7 +672,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 21px;
-		margin-bottom: 30px;
+		margin-bottom: 60px;
 	}
 	.avto-list {
 		gap: 5px;
@@ -774,48 +769,49 @@ body {
 /* max-width 550px */
 @media screen and (max-width: 550px) {
 	.screen-content {
-		width: 405px;
-		height: 290px;
-		padding: 15px 28px;
+		width: 380px;
+		height: 200px;
+		padding: 5px 28px;
 		gap: 4px;
 	}
 	.section-avto h2 {
 		font-size: 20px;
-		margin-bottom: 28px;
+		margin-bottom: 60px;
 	}
 	.avto-list {
+		position: relative;
+		left: 10px;
 		gap: 4px;
 	}
 	.avto-item {
-		width: 175px;
+		width: 105px;
 		height: 37px;
-		gap: 9px;
+		gap: 5px;
 	}
 	.avto-icon {
-		width: 32px;
-		height: 32px;
+		width: 25px;
+		height: 25px;
 	}
 	.avto-icon img {
-		width: 23px;
-		height: 21px;
+		width: 15px;
+		height: 15px;
 	}
 	.avto-text {
-		font-size: 8.5px;
+		font-size: 8px;
 	}
 	.integration-item {
 		width: 175px;
 		height: 37px;
-		gap: 9px;
-		margin-bottom: 19px;
+		gap: 5px;
 	}
 	.phone-container {
-		width: 195px;
-		height: 160px;
+		width: 175px;
+		height: 150px;
 	}
 	.phone-img {
-		width: 205px;
-		bottom: -4px;
-		right: 18px;
+		width: 170px;
+		bottom: -20px;
+		right: -20px;
 	}
 	.app-icon {
 		width: 23px;
@@ -826,7 +822,6 @@ body {
 /* max-width 500px */
 @media screen and (max-width: 500px) {
 	.container-avto {
-		padding: 25px 10px;
 		width: 100%;
 		max-width: 500px;
 	}
@@ -838,9 +833,9 @@ body {
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 380px;
+		width: 320px;
 		height: 260px;
-		padding: 30px 25px;
+		padding: 20px 25px;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto 1fr;
 		grid-template-areas:
@@ -851,7 +846,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 18px;
-		margin-bottom: 25px;
+		margin-bottom: 60px;
 		text-align: left;
 	}
 	.avto-list {
@@ -881,6 +876,11 @@ body {
 	.integration-section {
 		align-items: flex-start;
 	}
+		.integration-section > .integration-item {
+		position: relative;
+		left: -32px;
+		font-size: 7px;
+	}
 	.integration-item {
 		width: 160px;
 		height: auto;
@@ -888,19 +888,19 @@ body {
 		margin-bottom: 18px;
 	}
 	.phone-container {
-		width: 175px;
-		height: 145px;
+		width: 110px;
+		height: 130px;
 		right: 15px;
 		bottom: 5px;
 	}
 	.phone-img {
-		width: 185px;
-		bottom: 0;
-		right: 15px;
+		width: 175px;
+		bottom: 20px;
+		right: 30px;
 	}
 	.app-icon {
-		width: 20px;
-		height: 20px;
+		width: 15px;
+		height: 15px;
 		border-radius: 5px;
 	}
 	.app-icon:nth-child(1) {
@@ -956,14 +956,14 @@ body {
 /* max-width 450px */
 @media screen and (max-width: 450px) {
 	.screen-content {
-		width: 340px;
-		height: 235px;
-		padding: 28px 23px;
+		width: 300px;
+		height: 200px;
+		padding: 18px 23px;
 		gap: 3px;
 	}
 	.section-avto h2 {
 		font-size: 16px;
-		margin-bottom: 23px;
+		margin-bottom: 60px;
 	}
 	.avto-list {
 		gap: 3px;
@@ -974,15 +974,19 @@ body {
 		gap: 7px;
 	}
 	.avto-icon {
-		width: 28px;
-		height: 28px;
+		width: 25px;
+		height: 25px;
 	}
 	.avto-icon img {
-		width: 19px;
-		height: 18px;
+		width: 14px;
+		height: 15px;
 	}
 	.avto-text {
 		font-size: 6.5px;
+	}
+	.integration-section > .integration-item {
+		position: relative;
+		left: -30px;
 	}
 	.integration-item {
 		width: 145px;
@@ -991,13 +995,13 @@ body {
 		margin-bottom: 17px;
 	}
 	.phone-container {
-		width: 160px;
-		height: 130px;
+		width: 120px;
+		height: 110px;
 	}
 	.phone-img {
-		width: 170px;
-		bottom: -2px;
-		right: 14px;
+		width: 150px;
+		bottom: 20px;
+		right: 20px;
 	}
 	.app-icon {
 		width: 19px;
@@ -1009,7 +1013,6 @@ body {
 /* max-width 400px */
 @media screen and (max-width: 400px) {
 	.container-avto {
-		padding: 20px 5px;
 		width: 100%;
 		max-width: 400px;
 	}
@@ -1034,7 +1037,7 @@ body {
 	}
 	.section-avto h2 {
 		font-size: 14px;
-		margin-bottom: 20px;
+		margin-bottom: 60px;
 		text-align: left;
 	}
 	.avto-list {
@@ -1047,12 +1050,12 @@ body {
 		gap: 7px;
 	}
 	.avto-icon {
-		width: 25px;
-		height: 25px;
+		width: 20px;
+		height: 20px;
 	}
 	.avto-icon img {
-		width: 17px;
-		height: 15px;
+		width: 10px;
+		height: 10px;
 	}
 	.avto-text {
 		font-size: 6px;
@@ -1071,8 +1074,8 @@ body {
 		margin-bottom: 15px;
 	}
 	.phone-container {
-		width: 140px;
-		height: 115px;
+		width: 120px;
+		height: 110px;
 		right: 10px;
 		bottom: 0;
 	}
@@ -1091,33 +1094,38 @@ body {
 /* max-width 350px */
 @media screen and (max-width: 350px) {
 	.screen-content {
-		width: 270px;
+		width: 220px;
 		height: 185px;
 		padding: 22px 18px;
 		gap: 2px;
 	}
 	.section-avto h2 {
 		font-size: 12px;
-		margin-bottom: 18px;
+		margin-bottom: 60px;
 	}
 	.avto-list {
-		gap: 2px;
+		gap: 5px;
 	}
 	.avto-item {
-		width: 110px;
+		width: 100px;
 		height: auto;
-		gap: 6px;
+		gap: 0px;
 	}
 	.avto-icon {
-		width: 22px;
-		height: 22px;
+		width: 15px;
+		height: 15px;
 	}
 	.avto-icon img {
-		width: 15px;
-		height: 14px;
+		width: 10px;
+		height: 10px;
 	}
 	.avto-text {
-		font-size: 5.5px;
+		font-size: 5px;
+		margin: 0;
+	}
+	.integration-section > .integration-item {
+		position: relative;
+		left: -15px;
 	}
 	.integration-item {
 		width: 110px;
@@ -1126,17 +1134,17 @@ body {
 		margin-bottom: 13px;
 	}
 	.phone-container {
-		width: 140px;
-		height: 90px;
+		width: 90px;
+		height: 80px;
 	}
 	.phone-img {
-		width: 125px;
+		width: 100px;
 		bottom: -2px;
 		right: 11px;
 	}
 	.app-icon {
-		width: 15px;
-		height: 14px;
+		width: 10px;
+		height: 10px;
 		border-radius: 3.5px;
 	}
 }
@@ -1337,7 +1345,7 @@ body {
 /* max-width 900px */
 @media screen and (max-width: 900px) {
 	.section-avto h2 {
-		font-size: 32px;
+		font-size: 30px;
 		margin-bottom: 0px;
 	}
 }

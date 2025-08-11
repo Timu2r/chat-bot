@@ -35,7 +35,8 @@ body {
 }
 
 .gradient-overlay {
-	width: 1440px;
+	width: 100%;
+	max-width: 1440px;
 	margin: 0 auto;
 	margin-top: 100px;
 }
@@ -130,7 +131,8 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 1040px;
+	width: 100%;
+	max-width: 1040px;
 	height: 60px;
 	margin: 0 auto;
 	background: rgba(74, 147, 215, 0.6);
@@ -297,8 +299,7 @@ body {
 	visibility: visible;
 }
 
-/* Note: SVG wave animations are likely part of an SVG included in the assets.
-     Ensure these IDs (#wave-path-1, etc.) exist within the SVG for animations to work. */
+
 .decorative-icon:active + .decorative-vector-icon #wave-path-1 {
 	animation: wave 1s ease-in-out forwards;
 }
@@ -317,9 +318,7 @@ body {
 	}
 }
 
-.decorative-icon:active {
-	animation: vibrate 0.2s linear infinite;
-}
+
 
 @keyframes vibrate {
 	0% {
@@ -722,7 +721,7 @@ body {
 	}
 
 	.decorative-tooltip {
-		right: -3px; /* -10 * 0.33 */
+		right: 3px; /* -10 * 0.33 */
 		bottom: 55px; /* 140 * 0.33 */
 		font-size: 5px; /* 14 * 0.33 */
 		padding: 3px 5px; /* 8 * 0.33, 16 * 0.33 */
