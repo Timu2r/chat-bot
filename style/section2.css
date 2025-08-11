@@ -169,51 +169,51 @@ body {
 	.screen-content {
 		width: 800px;
 		height: 500px;
-		padding: 15px 55px;
-		gap: 2px;
+		padding: 20px 50px;
+		gap: 8px;
 	}
 	.section-avto h2 {
-		font-size: 40px;
+		font-size: 38px;
 		margin-bottom: 60px;
 	}
 	.avto-list {
-		gap: 9px;
+		gap: 8px;
 	}
 	.avto-item {
-		width: 370px;
-		height: 75px;
-		gap: 19px;
+		width: 350px;
+		height: 70px;
+		gap: 18px;
 	}
 	.avto-icon {
-		width: 68px;
-		height: 68px;
+		width: 50px;
+		height: 50px;
 	}
 	.avto-icon img {
-		width: 48px;
-		height: 44px;
+		width: 36px;
+		height: 32px;
 	}
 	.avto-text {
-		font-size: 17px;
+		font-size: 16px;
 	}
 	.integration-item {
-		width: 370px;
-		height: 75px;
-		gap: 19px;
-		margin-bottom: 38px;
+		width: 350px;
+		height: 70px;
+		gap: 18px;
+		margin-bottom: 36px;
 	}
 	.phone-container {
-		width: 310px;
-		height: 300px;
+		width: 330px;
+		height: 270px;
 	}
 	.phone-img {
-		width: 420px;
-		bottom: -9px;
-		right: 38px;
+		width: 400px;
+		bottom: -8px;
+		right: 36px;
 	}
 	.app-icon {
-		width: 48px;
-		height: 47px;
-		border-radius: 11px;
+		width: 30px;
+		height: 30px;
+		border-radius: 10px;
 	}
 }
 
@@ -238,12 +238,12 @@ body {
 		gap: 18px;
 	}
 	.avto-icon {
-		width: 65px;
-		height: 65px;
+		width: 50px;
+		height: 50px;
 	}
 	.avto-icon img {
-		width: 46px;
-		height: 42px;
+		width: 36px;
+		height: 32px;
 	}
 	.avto-text {
 		font-size: 16px;
@@ -255,7 +255,7 @@ body {
 		margin-bottom: 36px;
 	}
 	.phone-container {
-		width: 360px;
+		width: 330px;
 		height: 270px;
 	}
 	.phone-img {
@@ -264,8 +264,8 @@ body {
 		right: 36px;
 	}
 	.app-icon {
-		width: 46px;
-		height: 45px;
+		width: 30px;
+		height: 30px;
 		border-radius: 10px;
 	}
 }
@@ -273,107 +273,129 @@ body {
 /* max-width 950px */
 @media screen and (max-width: 950px) {
 	.screen-content {
-		width: 700px;
-		height: 500px;
-		padding: 20px 45px;
-		gap: 1px;
+		width: 650px;
+		height: 400px;
+		padding: 10px 20px;
+		gap: 4px;
 	}
 	.section-avto h2 {
-		font-size: 36px;
+		font-size: 22px;
 		margin-bottom: 60px;
 	}
 	.avto-list {
-		gap: 7px;
+		gap: 15px;
+		margin: 10px 0;
 	}
 	.avto-item {
-		width: 330px;
-		height: 65px;
-		gap: 17px;
+		width: 210px;
+		height: 42px;
+		gap: 15px;
+		margin: 0;
 	}
 	.avto-icon {
-		width: 60px;
-		height: 60px;
+		width: 40px;
+		height: 40px;
 	}
 	.avto-icon img {
-		width: 42px;
-		height: 38px;
+		width: 19px;
+		height: 18px;
 	}
 	.avto-text {
-		font-size: 15px;
+		font-size: 10.5px;
+		/* margin: 0; */
+
+	}
+	.integration-section > .integration-item {
+		position: relative;
+		left: 5px;
+		top: 10px;
 	}
 	.integration-item {
-		width: 330px;
-		height: 65px;
-		gap: 17px;
-		margin-bottom: 34px;
+		width: 210px;
+		height: 42px;
+		gap: 11px;
+		margin-bottom: 1px;
+		margin: auto 0;
 	}
 	.phone-container {
-		width: 300px;
+		width: 280px;
 		height: 280px;
+		left: 0px;
 	}
 	.phone-img {
-		width: 380px;
-		bottom: -7px;
-		right: 34px;
+		width: 365px;
+		bottom: 10px;
+		right: 22px;
 	}
 	.app-icon {
-		width: 42px;
-		height: 41px;
-		border-radius: 9px;
+		width: 27px;
+		height: 26px;
 	}
 }
 
 /* max-width 900px */
 @media screen and (max-width: 900px) {
-	.container-avto {
-		width: 90%;
-	}
-	.laptop-img {
-		max-width: 900px;
-	}
-	.screen-content {
-		width: 650px;
-		height: 350px;
-		padding: 10px 45px;
-	}
-	.section-avto h2 {
-		font-size: 28px;
-		margin-bottom: 60px;
-	}
-	.avto-item {
-		width: 290px;
-		height: 60px;
-		gap: 15px;
-	}
-	.avto-icon {
-		width: 50px;
-		height: 50px;
-	}
-	.avto-icon img {
-		width: 38px;
-		height: 35px;
-	}
-	.avto-text {
+	body {
 		font-size: 14px;
 	}
-	.integration-item {
-		width: 290px;
-		height: 60px;
+	.screen-content {
+		width: 600px;
+		height: 400px;
+		padding: 10px 20px;
+		gap: 4px;
+	}
+	.section-avto h2 {
+		font-size: 22px;
+		margin-bottom: 60px;
+	}
+	.avto-list {
 		gap: 15px;
-		margin-bottom: 30px;
+		margin: 10px 0;
+	}
+	.avto-item {
+		width: 210px;
+		height: 42px;
+		gap: 15px;
+		margin: 0;
+	}
+	.avto-icon {
+		width: 40px;
+		height: 40px;
+	}
+	.avto-icon img {
+		width: 19px;
+		height: 18px;
+	}
+	.avto-text {
+		font-size: 10.5px;
+		/* margin: 0; */
+
+	}
+	.integration-section > .integration-item {
+		position: relative;
+		left: 5px;
+		top: 10px;
+	}
+	.integration-item {
+		width: 210px;
+		height: 42px;
+		gap: 11px;
+		margin-bottom: 1px;
+		margin: auto 0;
 	}
 	.phone-container {
-		width: 270px;
-		height: 230px;
+		width: 280px;
+		height: 280px;
+		left: 0px;
 	}
 	.phone-img {
-		width: 330px;
-		bottom: -8px;
-		right: 30px;
+		width: 365px;
+		bottom: 10px;
+		right: 22px;
 	}
 	.app-icon {
-		width: 38px;
-		height: 37px;
+		width: 27px;
+		height: 26px;
 	}
 }
 /* max-width 850px */
@@ -381,111 +403,61 @@ body {
 	body {
 		font-size: 14px;
 	}
-	.container-avto {
-		width: 95%;
-	}
-	.laptop-img {
-		max-width: 700px;
-	}
 	.screen-content {
-		width: 520px;
-		height: 300px;
-		padding: 10px 35px;
+		width: 450px;
+		height: 335px;
+		padding: 10px 20px;
+		gap: 4px;
 	}
 	.section-avto h2 {
-		font-size: 24px;
+		font-size: 22px;
 		margin-bottom: 60px;
 	}
+	.avto-list {
+		gap: 0px;
+	}
 	.avto-item {
-		width: 225px;
-		height: 45px;
-		gap: 12px;
+		width: 210px;
+		height: 42px;
+		gap: 5px;
+		margin: 0;
 	}
 	.avto-icon {
-		width: 40px;
-		height: 40px;
+		width: 35px;
+		height: 35px;
 	}
 	.avto-icon img {
-		width: 29px;
-		height: 27px;
+		width: 19px;
+		height: 18px;
 	}
 	.avto-text {
-		font-size: 10px;
-		line-height: 1.4;
-	}
-	.integration-item {
-		width: 225px;
-		height: 45px;
-		gap: 12px;
-		margin-bottom: 22px;
-	}
-	.phone-container {
-		width: 250px;
-		height: 200px;
-	}
-	.phone-img {
-		width: 260px;
-		bottom: -6px;
-		right: 23px;
-	}
-	.app-icon {
-		width: 29px;
-		height: 28px;
-		border-radius: 8px;
-	}
-}
+		font-size: 8.5px;
+		margin: 0;
 
-/* max-width 800px */
-@media screen and (max-width: 800px) {
-	.container-avto {
-		width: 90%;
 	}
-	.laptop-img {
-		max-width: 800px;
-	}
-	.screen-content {
-		width: 580px;
-		height: 320px;
-		padding: 5px 40px;
-	}
-	.section-avto h2 {
-		font-size: 28px;
-		margin-bottom: 60px;
-	}
-	.avto-item {
-		width: 255px;
-		height: 50px;
-		gap: 13px;
-	}
-	.avto-icon {
-		width: 45px;
-		height: 45px;
-	}
-	.avto-icon img {
-		width: 33px;
-		height: 30px;
-	}
-	.avto-text {
-		font-size: 12px;
+	.integration-section > .integration-item {
+		position: relative;
+		left: 5px;
 	}
 	.integration-item {
-		width: 255px;
-		height: 50px;
-		gap: 13px;
-		margin-bottom: 25px;
+		width: 210px;
+		height: 42px;
+		gap: 11px;
+		margin-bottom: 1px;
 	}
 	.phone-container {
-		width: 245px;
-		height: 200px;
+		width: 230px;
+		height: 210px;
+		left: 0px;
 	}
 	.phone-img {
-		width: 295px;
-		bottom: -7px;
-		right: 26px;
+		width: 265px;
+		bottom: -10px;
+		right: 22px;
 	}
 	.app-icon {
-		width: 33px;
-		height: 32px;
+		width: 27px;
+		height: 26px;
 	}
 }
 
@@ -550,66 +522,10 @@ body {
 
 /* max-width 700px */
 @media screen and (max-width: 700px) {
-	.container-avto {
-		width: 95%;
-	}
-	.laptop-img {
-		max-width: 700px;
-	}
 	.screen-content {
-		width: 520px;
-		height: 300px;
-		padding: 10px 35px;
-	}
-	.section-avto h2 {
-		font-size: 24px;
-		margin-bottom: 60px;
-	}
-	.avto-item {
-		width: 225px;
-		height: 45px;
-		gap: 12px;
-	}
-	.avto-icon {
-		width: 40px;
-		height: 40px;
-	}
-	.avto-icon img {
-		width: 29px;
-		height: 27px;
-	}
-	.avto-text {
-		font-size: 10px;
-		line-height: 1.4;
-	}
-	.integration-item {
-		width: 225px;
-		height: 45px;
-		gap: 12px;
-		margin-bottom: 22px;
-	}
-	.phone-container {
-		width: 250px;
-		height: 200px;
-	}
-	.phone-img {
-		width: 260px;
-		bottom: -6px;
-		right: 23px;
-	}
-	.app-icon {
-		width: 29px;
-		height: 28px;
-		border-radius: 8px;
-	}
-}
-
-/* max-width 650px */
-@media screen and (max-width: 650px) {
-	.screen-content {
-		width: 480px;
-		height: 345px;
-		padding: 20px 33px;
+		width: 450px;
+		height: 335px;
+		padding: 10px 33px;
 		gap: 4px;
 	}
 	.section-avto h2 {
@@ -617,37 +533,106 @@ body {
 		margin-bottom: 60px;
 	}
 	.avto-list {
-		gap: 4px;
+		gap: 0px;
 	}
 	.avto-item {
 		width: 210px;
 		height: 42px;
-		gap: 11px;
+		gap: 5px;
+		margin: 0;
 	}
 	.avto-icon {
-		width: 38px;
-		height: 38px;
+		width: 30px;
+		height: 30px;
 	}
 	.avto-icon img {
-		width: 27px;
-		height: 25px;
+		width: 14px;
+		height: 15px;
 	}
 	.avto-text {
-		font-size: 9.5px;
+		font-size: 7.5px;
+		margin: 0;
+
+	}
+	.integration-section > .integration-item {
+		position: relative;
+		left: -15px;
+		margin: 0;
 	}
 	.integration-item {
 		width: 210px;
 		height: 42px;
 		gap: 11px;
-		margin-bottom: 21px;
+		margin-bottom: 1px;
 	}
 	.phone-container {
-		width: 195px;
-		height: 170px;
+		width: 160px;
+		height: 160px;
+		left: -30px;
 	}
 	.phone-img {
 		width: 245px;
-		bottom: -5px;
+		bottom: 0px;
+		right: 22px;
+	}
+	.app-icon {
+		width: 27px;
+		height: 26px;
+	}
+}
+
+/* max-width 650px */
+@media screen and (max-width: 650px) {
+	.screen-content {
+		width: 450px;
+		height: 335px;
+		padding: 10px 33px;
+		gap: 4px;
+	}
+	.section-avto h2 {
+		font-size: 22px;
+		margin-bottom: 60px;
+	}
+	.avto-list {
+		gap: 0px;
+	}
+	.avto-item {
+		width: 210px;
+		height: 42px;
+		gap: 5px;
+		margin: 0;
+	}
+	.avto-icon {
+		width: 30px;
+		height: 30px;
+	}
+	.avto-icon img {
+		width: 14px;
+		height: 15px;
+	}
+	.avto-text {
+		font-size: 7.5px;
+		margin: 0;
+
+	}
+	.integration-section > .integration-item {
+		position: relative;
+		left: -15px;
+	}
+	.integration-item {
+		width: 210px;
+		height: 42px;
+		gap: 11px;
+		margin-bottom: 1px;
+	}
+	.phone-container {
+		width: 160px;
+		height: 160px;
+		left: -30px;
+	}
+	.phone-img {
+		width: 245px;
+		bottom: 0px;
 		right: 22px;
 	}
 	.app-icon {

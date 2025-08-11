@@ -18,7 +18,6 @@
 	font-weight: 700;
 	color: #1a365d;
 	text-align: left;
-	margin: 40px 0;
 }
 
 /* Pricing Cards */
@@ -864,7 +863,7 @@
 /* Small Mobile: max-width 480px */
 @media screen and (max-width: 480px) {
 	.section-price {
-		padding: 30px 0; /* Adjusted */
+		padding: 0; /* Adjusted */
 	}
 
 	.section-price h5 {
