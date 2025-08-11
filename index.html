@@ -8,7 +8,7 @@
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 			rel="stylesheet"
 		/>
-		
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -27,38 +27,46 @@
 	<body>
 		<div class="site-wrapper">
 			<header class="header">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/logo.svg" alt="VALLES logo" />
-                </a>
-                <button class="navbar-toggler burger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+				<div class="container">
+					<nav class="navbar navbar-expand-lg">
+						<a class="navbar-brand" href="#">
+							<img src="./assets/logo.svg" alt="VALLES logo" />
+						</a>
+						<button
+							class="navbar-toggler burger-menu"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarNav"
+							aria-controls="navbarNav"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
 
-                <div class="collapse navbar-collapse mobile-menu" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Кейсы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Попробовать</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Тарифы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Наши контакты</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+						<div class="collapse navbar-collapse mobile-menu" id="navbarNav">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#for-whom">Кейсы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#main-section">Попробовать</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#tariffs">Тарифы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#contacts">Наши контакты</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
 			<main>
-				<section class="main-section">
+				<section class="main-section" id="main-section">
 					<div class="gradient-overlay">
 						<div class="container content-wrapper">
 							<div class="row">
@@ -143,18 +151,23 @@
 								alt="vector"
 								class="decorative-vector-icon"
 							/>
-							<div class="decorative-tooltip">запустить игру</div>
+							<div class="decorative-tooltip">Запуск игру</div>
 						</div>
 					</div>
 				</section>
 
-				<section class="section-avto">
+				<section class="section-avto" id="automation-ecosystem">
 					<div class="container-avto">
-						<h1>Экосистема автоматизации</h1>
 						<div class="laptop-wrapper">
-							<img src="./assets/labtop.png" alt="laptop" class="laptop-img" />
+							<img
+								src="./assets/laptop_fon.png"
+								alt="laptop"
+								class="laptop-img"
+							/>
 							<div class="screen-background"></div>
 							<div class="screen-content">
+								<h2>Экосистема автоматизации</h2>
+
 								<div class="avto-list">
 									<div class="avto-item">
 										<div class="avto-icon">
@@ -290,6 +303,21 @@
 												alt="Google"
 												class="app-icon"
 											/>
+											<img
+												src="./assets/pflogo_fb 1.svg"
+												alt="pflogo_fb"
+												class="app-icon"
+											/>
+											<img
+												src="./assets/unnamed 1.svg"
+												alt="logo_k"
+												class="app-icon"
+											/>
+											<img
+												src="./assets/amocrm-ru-icon-unpla 1 (1).svg"
+												alt="amocrm"
+												class="app-icon"
+											/>
 										</div>
 									</div>
 								</div>
@@ -298,9 +326,9 @@
 					</div>
 				</section>
 
-				<section class="chatbot-section">
+				<section class="chatbot-section" id="for-whom">
 					<div class="cercle-cont">
-						<h2 class="section-title">Для кого работает чат-бот</h2>
+						<h3 class="section-title">Для кого работает чат-бот</h3>
 						<div class="diagram-container">
 							<div class="inner-orbit orbit-1">
 								<div class="orbit-dot dot-1"></div>
@@ -380,9 +408,9 @@
 					</div>
 				</section>
 
-				<section class="map-bot">
+				<section class="map-bot" id="how-it-works">
 					<div class="map-analitic">
-						<h1>Как работает чат-бот</h1>
+						<h4>Как работает чат-бот</h4>
 						<div class="map-cont">
 							<img
 								src="./assets/Vector 72.svg"
@@ -401,7 +429,7 @@
 										alt="Анализ"
 										class="metca-icon icon-1"
 									/>
-									<h2>1</h2>
+									<span>1</span>
 								</div>
 								<p>Анализ задач</p>
 							</div>
@@ -417,7 +445,7 @@
 										alt="Алгоритм"
 										class="metca-icon icon-2"
 									/>
-									<h2>2</h2>
+									<span>2</span>
 								</div>
 								<p>Подготовка сценария</p>
 							</div>
@@ -433,7 +461,7 @@
 										alt="Сборка"
 										class="metca-icon icon-3"
 									/>
-									<h2>3</h2>
+									<span>3</span>
 								</div>
 								<p>Сборка по шаблону</p>
 							</div>
@@ -449,7 +477,7 @@
 										alt="Тестирование"
 										class="metca-icon icon-4"
 									/>
-									<h2>4</h2>
+									<span>4</span>
 								</div>
 								<p>Тестирование</p>
 							</div>
@@ -465,7 +493,7 @@
 										alt="Запуск"
 										class="metca-icon icon-5"
 									/>
-									<h2>5</h2>
+									<span>5</span>
 								</div>
 								<p>Запуск</p>
 							</div>
@@ -473,9 +501,9 @@
 					</div>
 				</section>
 
-				<section class="section-price">
+				<section class="section-price" id="tariffs">
 					<div class="container-price">
-						<h1>Тарифы</h1>
+						<h5>Тарифы</h5>
 
 						<div class="pricing-section">
 							<div class="pricing-card basic">
@@ -667,7 +695,7 @@
 							</div>
 						</div>
 
-						<div class="chatbot-form">
+						<form class="chatbot-form" novalidate>
 							<div class="form-content">
 								<img
 									src="./assets/робот вариант 1@2x 1.svg"
@@ -677,32 +705,59 @@
 								<div class="row">
 									<div class="col-lg-6 form-politixs">
 										<h2 class="form-title">Протестируйте<br />наш чат-бот</h2>
-										<button class="test-btn">Протестировать</button>
+										<button class="test-btn" type="submit">
+											Протестировать
+										</button>
 										<div class="politics">
 											<div class="service-item" onclick="toggleService(this)">
 												<div class="checkbox"></div>
+												<input
+													type="checkbox"
+													id="privacyPolicy"
+													required
+													style="display: none"
+												/>
 												<span class="service-text"
 													>Отправляя данные через форму, Вы соглашаетесь с
 													Политикой обработки персональных данных</span
 												>
+												<div class="invalid-feedback">
+													Вы должны согласиться с политикой конфиденциальности.
+												</div>
 											</div>
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-group">
-											<input type="text" class="form-input" placeholder="Имя" />
+											<input
+												type="text"
+												class="form-input"
+												id="userName"
+												name="userName"
+												placeholder="Имя"
+												required
+											/>
+											<div class="invalid-feedback">
+												Пожалуйста, введите ваше имя.
+											</div>
 										</div>
 										<div class="form-group">
 											<input
 												type="tel"
 												class="form-input"
+												id="userPhone"
+												name="userPhone"
 												placeholder="Телефон"
+												required
+												pattern="[0-9]{10,15}"
 											/>
 										</div>
 										<div class="form-group">
 											<input
 												type="text"
 												class="form-input"
+												id="userWebsite"
+												name="userWebsite"
 												placeholder="Веб-сайт/сфера бизнеса"
 											/>
 										</div>
@@ -710,18 +765,41 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</form>
 					</div>
 				</section>
 			</main>
-			<footer>
+			<footer id="contacts">
 				<div class="fot">
 					<div>
-						<img src="./assets/1257 1.svg" alt="tel" />
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="19"
+							height="19"
+							fill="currentColor"
+							class="bi bi-telephone-fill"
+							viewBox="0 0 16 16"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+							/>
+						</svg>
 						<a href="tel:+7 900 000 00 00">+7 900 000 00 00</a>
 					</div>
 					<div>
-						<img src="./assets/73756@2x 1.svg" alt="mail" />
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="19"
+							height="19"
+							fill="currentColor"
+							class="bi bi-envelope-fill"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+							/>
+						</svg>
 						<a href="mailto:vallesdesign@mail.ru">vallesdesign@mail.ru</a>
 					</div>
 				</div>

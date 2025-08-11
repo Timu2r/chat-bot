@@ -112,3 +112,99 @@
 		margin: 10px 0;
 	}
 }
+
+/* Tablet and smaller mobile devices */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        height: 80px;
+    }
+
+    .navbar-brand img {
+        height: 50px;
+    }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 576px) {
+    .header {
+        padding: 10px 15px;
+        height: 70px;
+    }
+
+    .navbar-brand img {
+        height: 45px;
+    }
+
+    .burger-menu {
+        width: 25px;
+        height: 25px;
+    }
+
+    .burger-menu span {
+        height: 2px;
+    }
+
+    .burger-menu span:nth-child(1) {
+        top: 2px;
+    }
+
+    .burger-menu span:nth-child(2) {
+        top: 8px;
+    }
+
+    .burger-menu span:nth-child(3) {
+        top: 14px;
+    }
+
+    .burger-menu.open span:nth-child(1) {
+        top: 7px;
+    }
+
+    .burger-menu.open span:nth-child(3) {
+        top: 7px;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 320px) {
+    .header {
+        padding: 8px 10px;
+        height: 60px;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .burger-menu {
+        width: 20px;
+        height: 20px;
+    }
+
+    .burger-menu span {
+        height: 2px;
+    }
+
+    .burger-menu span:nth-child(1) {
+        top: 1px;
+    }
+
+    .burger-menu span:nth-child(2) {
+        top: 6px;
+    }
+
+    .burger-menu span:nth-child(3) {
+        top: 11px;
+    }
+
+    .burger-menu.open span:nth-child(1) {
+        top: 5px;
+    }
+
+    .burger-menu.open span:nth-child(3) {
+        top: 5px;
+    }
+}
+
+

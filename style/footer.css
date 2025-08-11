@@ -26,19 +26,27 @@ footer {
 }
 
 .fot a {
-	color: #333333;
+	color: #012547;
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: 500;
-	transition: color 0.2s ease;
+	transition: all 0.2s ease;
 }
 
-.fot a:hover {
-	color: #012547;
+.fot div:hover a {
+	color: #FFBF36;
 }
 
-.fot div:hover img {
-	transform: scale(1.1);
+.fot div:hover a {
+  color: #FFBF36; 
+}
+
+.fot div:hover svg {
+  fill: #FFBF36;
+}
+
+svg {
+	transition: all 0.2s ease;
 }
 
 .chats {

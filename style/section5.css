@@ -1,7 +1,6 @@
 /* New styles for .section-price - adapted for responsiveness */
 .section-price {
 	background: linear-gradient(179.67deg, #c8e0fb 23.91%, #4a93d7 67.93%);
-	padding: 80px 0;
 	text-align: center;
 	font-family: 'Inter', sans-serif;
 }
@@ -9,16 +8,17 @@
 .container-price {
 	margin: 0 auto;
 	max-width: 1440px;
-	padding: 0 20px;
+	padding: 0 30px;
 }
 
-.section-price h1 {
-	/* Changed from h1 to .section-price h1 to be more specific */
+.section-price h5 {
 	font-family: 'Inter', sans-serif;
 	grid-area: title;
 	font-size: 42px;
 	font-weight: 700;
 	color: #1a365d;
+	text-align: left;
+	margin-bottom: 40px;
 }
 
 /* Pricing Cards */
@@ -473,7 +473,7 @@
 		padding: 60px 0; /* 80 * 0.75 */
 	}
 
-	.section-price h1 {
+	.section-price h5 {
 		font-size: 36px; /* 48 * 0.75 */
 		margin-bottom: 45px; /* 60 * 0.75 */
 	}
@@ -489,7 +489,7 @@
 
 	.pricing-card {
 		padding: 30px 20px; /* 40 * 0.75, 30 * 0.75 */
-		max-width: 270px; /* 360 * 0.75 */
+		max-width: 300px; /* 360 * 0.75 */
 		height: 375px; /* 500 * 0.75 */
 	}
 
@@ -527,10 +527,16 @@
 		border-radius: 18px; /* 25 * 0.75 */
 	}
 
-	.services-grid {
-		display: block;
-		margin-bottom: 60px; /* 80 * 0.75 */
-	}
+  .services-grid {
+    display: grid; /* Changed from flex */
+    grid-template-columns: repeat(2, 1fr) 300px; /* Two equal columns for checkboxes, one fixed for selected-services */
+    gap: 20px; /* Уменьшаем отступ между колонками */
+    margin-bottom: 60px;
+  }
+
+  .service-column {
+    width: auto; /* Let grid handle width */
+  }
 
 	.service-column h3 {
 		font-size: 18px; /* 22 * 0.75 */
@@ -564,7 +570,7 @@
 	.selected-services {
 		padding: 22.5px;
 		width: 300px;
-		margin: 0 auto;
+		margin: 0; /* Remove auto margin as grid will position */
 	}
 
 	.selected-services h3 {
@@ -674,7 +680,7 @@
 		padding: 40px 0; /* 80 * 0.5 */
 	}
 
-	.section-price h1 {
+	.section-price h5 {
 		font-size: 24px; /* 48 * 0.5 */
 		margin-bottom: 30px; /* 60 * 0.5 */
 	}
@@ -861,10 +867,9 @@
 		padding: 30px 0; /* Adjusted */
 	}
 
-	.section-price h1 {
+	.section-price h5 {
 		font-size: 18px; /* Adjusted */
 		margin-bottom: 20px; /* Adjusted */
-		text-align: center; /* Centered for small screens */
 	}
 
 	.pricing-section {

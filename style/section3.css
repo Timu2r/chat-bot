@@ -4,7 +4,6 @@
 }
 
 .cercle-cont {
-	padding: 80px 10px 0;
 	position: relative;
 	width: 100%;
 	max-width: 1440px;
@@ -131,10 +130,16 @@
 	align-items: center;
 	justify-content: center;
 	z-index: 99;
+	transition: 0.3s all;
 }
 
-.orbit-item:hover {
+.orbit-img-cont:hover {
 	box-shadow: 0 6px 20px #58aeff;
+	transform: scale(1.1);
+}
+
+.orbit-img-cont:hover ~ .orbit-label {
+    transform: translateX(-50%) scale(1.1);
 }
 
 @keyframes orbit-item-pulse {
@@ -152,10 +157,6 @@
     }
 }
 
-.orbit-item:hover .orbit-img-cont {
-    animation: orbit-item-pulse 1.5s infinite;
-}
-
 .orbit-item img {
 	width: 32px;
 	height: 32px;
@@ -163,14 +164,16 @@
 
 .orbit-label {
 	position: absolute;
-	top: 90px;
+	top: 100px;
 	left: 50%;
 	transform: translateX(-50%);
-	font-size: 14px;
+	font-size: 18px;
 	color: #ffffff;
 	font-weight: 600;
 	text-align: center;
 	white-space: nowrap;
+	z-index: 9;
+	transition: all 0.2s;
 }
 
 .orbit-tooltip {
@@ -274,7 +277,7 @@
 
 /* Общие стили для вращающихся элементов - замедленная анимация */
 .orbit-item {
-	animation: orbit-rotation 40s linear infinite; /* Увеличено с 20s до 40s */
+	animation: orbit-rotation 80s linear infinite; /* Увеличено с 20s до 80s */
 }
 
 /* Распределение элементов с разными стартовыми позициями */
@@ -282,21 +285,21 @@
 	animation-delay: 0s;
 }
 .support {
-	animation-delay: -8s; /* Обновлено для новой скорости */
-}
-.b2b {
 	animation-delay: -16s;
 }
+.b2b {
+	animation-delay: -32s;
+}
 .hr {
-	animation-delay: -24s;
+	animation-delay: -48s;
 }
 .services {
-	animation-delay: -32s;
+	animation-delay: -64s;
 }
 
 /* Стили для точек на первой орбите */
 .orbit-dot {
-	animation: orbit-1-rotation 40s linear infinite; /* Замедлено */
+	animation: orbit-1-rotation 80s linear infinite; /* Замедлено */
 	transform-origin: center;
 }
 
@@ -305,16 +308,16 @@
 	animation-delay: 0s;
 }
 .dot-2 {
-	animation-delay: -8s;
-}
-.dot-3 {
 	animation-delay: -16s;
 }
+.dot-3 {
+	animation-delay: -32s;
+}
 .dot-4 {
-	animation-delay: -24s;
+	animation-delay: -48s;
 }
 .dot-5 {
-	animation-delay: -32s;
+	animation-delay: -64s;
 }
 
 /* Стили для соединительных линий */
