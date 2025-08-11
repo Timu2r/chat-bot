@@ -1,330 +1,638 @@
+.map-bot {
+	padding: 80px 0;
+	background: linear-gradient(180deg, #94c3f7 6%, #ffffff 210.81%);
+	font-family: 'Inter', sans-serif;
+}
+
+.map-bot h1 {
+	font-family: 'Inter', sans-serif;
+	grid-area: title;
+	font-size: 42px;
+	font-weight: 700;
+	color: #1a365d;
+}
+
+.map-analitic {
+	position: relative;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.map-cont {
+	position: relative;
+	width: 100%;
+	max-width: 1000px; /* Set a max-width for the map container */
+	height: 800px;
+	margin: 0 auto; /* Center the map container */
+}
+
+.vector-line {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%; /* Responsive width */
+	max-width: 1000px; /* Original max width */
+	height: auto;
+}
+
+.metca {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.metca-content {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.metca-content h2 {
+	font-family: 'Inter', sans-serif;
+	font-weight: 900;
+	font-size: 160px;
+	line-height: 1;
+	background-image: linear-gradient(
+		180deg,
+		#58aeff 0%,
+		rgba(88, 174, 255, 0.3) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	margin: 0;
+	filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.25));
+	position: absolute;
+}
+
+.metca-icon {
+	width: 124px;
+	height: 177px;
+	position: absolute;
+	z-index: 10;
+}
+
+.metca p {
+	font-family: Inter;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+	color: #ffffff;
+	position: absolute;
+	white-space: nowrap;
+}
+
+/* Base positions relative to .map-cont (desktop) - UPDATED */
+.metca-1 {
+	left: -40px;
+	top: 200px;
+}
+.metca-2 {
+	top: 200px;
+	left: -85px;
+}
+.metca-3 {
+	top: 180px;
+	left: -20px;
+}
+.metca-4 {
+	left: -110px;
+	top: 190px;
+}
+.metca-5 {
+	top: 130px;
+	left: 670px;
+}
+
+/* Individual icon, vector, h2, p positions (desktop) - UPDATED */
+.icon-1 {
+	top: -30px;
+	left: 120px;
+}
+.main-vector1 {
+	position: absolute;
+	z-index: 15;
+	top: 10px;
+	left: 152px;
+}
+.metca-1 h2 {
+	top: -80px;
+}
+.metca-1 p {
+	left: 250px;
+	top: 20px;
+}
+
+.icon-2 {
+	top: 170px;
+	left: 480px;
+}
+.main-vector2 {
+	position: absolute;
+	z-index: 15;
+	top: 200px;
+	left: 509px;
+}
+.metca-2 h2 {
+	top: 110px;
+	left: 400px;
+}
+.metca-2 p {
+	top: 200px;
+	left: 610px;
+}
+
+.icon-3 {
+	top: 440px;
+	left: 50px;
+}
+.main-vector3 {
+	position: absolute;
+	z-index: 15;
+	top: 470px;
+	left: 85px;
+}
+.metca-3 h2 {
+	top: 380px;
+	left: -20px;
+}
+.metca-3 p {
+	top: 480px;
+	left: 180px;
+}
+
+.icon-4 {
+	top: 340px;
+	left: 780px;
+}
+.main-vector4 {
+	position: absolute;
+	z-index: 15;
+	top: 370px;
+	left: 805px;
+}
+.metca-4 h2 {
+	top: 260px;
+	left: 700px;
+}
+.metca-4 p {
+	top: 400px;
+	left: 920px;
+}
+
+.main-vector5 {
+	position: absolute;
+	z-index: 15;
+	top: 50px;
+	left: 70px;
+}
+.metca-5 h2 {
+	top: -30px;
+	left: -30px;
+}
+.metca-5 p {
+	top: 60px;
+	left: 180px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet: max-width 1040px */
+@media screen and (max-width: 1040px) {
 	.map-bot {
-		padding: 80px 0;
-		background: linear-gradient(180deg, #94c3f7 6%, #ffffff 210.81%);
+		padding: 56px 0; /* 80px * 0.7 */
 	}
-
 	.map-bot h1 {
-		font-family: 'Inter', sans-serif;
-		font-weight: 500;
-		font-size: 60px;
-		line-height: 150%;
-		letter-spacing: -0.011em;
-		text-align: left;
-		margin: 0 30px 50px 30px;
-		color: #012547;
+		font-size: 42px; /* 60px * 0.7 */
+		margin: 0 21px 35px 21px; /* 30px * 0.7, 50px * 0.7 */
 	}
-
-	.map-analitic {
-		position: relative;
-		width: 100%;
-		max-width: 1440px;
-		margin: 0 auto;
-	}
-
 	.map-cont {
-		position: relative;
-		width: 100%;
-		max-width: 1000px; /* Set a max-width for the map container */
-		height: 800px;
-		margin: 0 auto; /* Center the map container */
+		height: 560px; /* 800px * 0.7 */
+		max-width: 700px; /* 1000px * 0.7 */
 	}
-
 	.vector-line {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 90%; /* Responsive width */
-		max-width: 1000px; /* Original max width */
-		height: auto;
+		max-width: 700px; /* 1000px * 0.7 */
 	}
-
-	.metca {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
 	.metca-content {
-		position: relative;
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 20px;
-		filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+		width: 140px; /* 200px * 0.7 */
+		height: 140px; /* 200px * 0.7 */
+		margin-bottom: 14px; /* 20px * 0.7 */
 	}
-
 	.metca-content h2 {
-		font-family: 'Inter', sans-serif;
-		font-weight: 900;
-		font-size: 160px;
-		line-height: 1;
-		background-image: linear-gradient(
-			180deg,
-			#58aeff 0%,
-			rgba(88, 174, 255, 0.3) 100%
-		);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		color: transparent;
-		margin: 0;
-		filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.25));
-		position: absolute;
+		font-size: 112px; /* 160px * 0.7 */
 	}
-
 	.metca-icon {
-		width: 124px;
-		height: 177px;
-		position: absolute;
-		z-index: 10;
+		width: 86.8px; /* 124px * 0.7 */
+		height: 123.9px; /* 177px * 0.7 */
 	}
-
 	.metca p {
-		font-family: Inter;
-		font-weight: 500;
-		font-size: 30px;
-		line-height: 40px;
-		text-align: center;
-		color: #ffffff;
-		position: absolute;
-		white-space: nowrap;
+		font-size: 21px; /* 30px * 0.7 */
+		line-height: 28px; /* 40px * 0.7 */
 	}
 
-	/* Base positions relative to .map-cont (desktop) - UPDATED */
-	.metca-1 { left: -40px; top: 200px; }
-	.metca-2 { top: 200px; left: -85px; }
-	.metca-3 { top: 180px; left: -20px; }
-	.metca-4 { left: -110px; top: 190px; }
-	.metca-5 { top: 130px; left: 670px; }
-
-	/* Individual icon, vector, h2, p positions (desktop) - UPDATED */
-	.icon-1 { top: -30px; left: 120px; }
-	.main-vector1 { position: absolute; z-index: 15; top: 10px; left: 152px; }
-	.metca-1 h2 { top: -80px; }
-	.metca-1 p { left: 250px; top: 20px; }
-
-	.icon-2 { top: 170px; left: 480px; }
-	.main-vector2 { position: absolute; z-index: 15; top: 200px; left: 509px; }
-	.metca-2 h2 { top: 110px; left: 400px; }
-	.metca-2 p { top: 200px; left: 610px; }
-
-	.icon-3 { top: 440px; left: 50px; }
-	.main-vector3 { position: absolute; z-index: 15; top: 470px; left: 85px; }
-	.metca-3 h2 { top: 380px; left: -20px; }
-	.metca-3 p { top: 480px; left: 180px; }
-
-	.icon-4 { top: 340px; left: 780px; }
-	.main-vector4 { position: absolute; z-index: 15; top: 370px; left: 805px; }
-	.metca-4 h2 { top: 260px; left: 700px; }
-	.metca-4 p { top: 400px; left: 920px; }
-
-	.main-vector5 { position: absolute; z-index: 15; top: 50px; left: 70px; }
-	.metca-5 h2 { top: -30px; left: -30px; }
-	.metca-5 p { top: 60px; left: 180px; }
-
-
-	/* --- MEDIA QUERIES --- */
-
-	/* Tablet: max-width 1040px */
-	@media screen and (max-width: 1040px) {
-		.map-bot {
-			padding: 56px 0; /* 80px * 0.7 */
-		}
-		.map-bot h1 {
-			font-size: 42px; /* 60px * 0.7 */
-			margin: 0 21px 35px 21px; /* 30px * 0.7, 50px * 0.7 */
-		}
-		.map-cont {
-			height: 560px; /* 800px * 0.7 */
-			max-width: 700px; /* 1000px * 0.7 */
-		}
-		.vector-line {
-			max-width: 700px; /* 1000px * 0.7 */
-		}
-		.metca-content {
-			width: 140px; /* 200px * 0.7 */
-			height: 140px; /* 200px * 0.7 */
-			margin-bottom: 14px; /* 20px * 0.7 */
-		}
-		.metca-content h2 {
-			font-size: 112px; /* 160px * 0.7 */
-		}
-		.metca-icon {
-			width: 86.8px; /* 124px * 0.7 */
-			height: 123.9px; /* 177px * 0.7 */
-		}
-		.metca p {
-			font-size: 21px; /* 30px * 0.7 */
-			line-height: 28px; /* 40px * 0.7 */
-		}
-
-		/* .metca group positions (scaled) - UPDATED */
-		.metca-1 { left: -28px; top: 140px; }
-		.metca-2 { top: 140px; left: -59.5px; }
-		.metca-3 { top: 126px; left: -14px; }
-		.metca-4 { left: -77px; top: 133px; }
-		.metca-5 { top: 91px; left: 469px; }
-
-		/* Individual icon, vector, h2, p positions (scaled) - UPDATED */
-		.icon-1 { top: -21px; left: 84px; }
-		.main-vector1 { top: 7px; left: 106.4px; width: 45px; }
-		.metca-1 h2 { top: -56px; }
-		.metca-1 p { left: 175px; top: 14px; }
-
-		.icon-2 { top: 119px; left: 336px; }
-		.main-vector2 { top: 142px; left: 356.6px; width: 45px; }
-		.metca-2 h2 { top: 77px; left: 280px; }
-		.metca-2 p { top: 140px; left: 427px; }
-
-		.icon-3 { top: 308px; left: 35px; }
-		.main-vector3 { top: 329px; left: 56px; width: 45px; }
-		.metca-3 h2 { top: 266px; left: -14px; }
-		.metca-3 p { top: 336px; left: 126px; }
-
-		.icon-4 { top: 238px; left: 546px; }
-		.main-vector4 { top: 259px; left: 563.5px; width: 55px; }
-		.metca-4 h2 { top: 182px; left: 490px; }
-		.metca-4 p { top: 280px; left: 644px; }
-
-		.main-vector5 { top: 35px; left: 49px; width: 45px; }
-		.metca-5 h2 { top: -21px; left: -21px; }
-		.metca-5 p { top: 42px; left: 126px; }
+	/* .metca group positions (scaled) - UPDATED */
+	.metca-1 {
+		left: -28px;
+		top: 140px;
+	}
+	.metca-2 {
+		top: 140px;
+		left: -59.5px;
+	}
+	.metca-3 {
+		top: 126px;
+		left: -14px;
+	}
+	.metca-4 {
+		left: -77px;
+		top: 133px;
+	}
+	.metca-5 {
+		top: 91px;
+		left: 469px;
 	}
 
-	/* Mobile: max-width 768px */
-	@media screen and (max-width: 768px) {
-		.map-bot {
-			padding: 40px 0; /* 80px * 0.5 */
-		}
-		.map-bot h1 {
-			font-size: 30px; /* 60px * 0.5 */
-			margin: 0 15px 25px 15px; /* 30px * 0.5, 50px * 0.5 */
-		}
-		.map-cont {
-			height: 400px; /* 800px * 0.5 */
-			max-width: 500px; /* 1000px * 0.5 */
-		}
-		.vector-line {
-			max-width: 500px; /* 1000px * 0.5 */
-		}
-		.metca-content {
-			width: 100px; /* 200px * 0.5 */
-			height: 100px; /* 200px * 0.5 */
-			margin-bottom: 10px; /* 20px * 0.5 */
-		}
-		.metca-content h2 {
-			font-size: 80px; /* 160px * 0.5 */
-		}
-		.metca-icon {
-			width: 62px; /* 124px * 0.5 */
-			height: 88.5px; /* 177px * 0.5 */
-		}
-		.metca p {
-			font-size: 15px; /* 30px * 0.5 */
-			line-height: 20px; /* 40px * 0.5 */
-		}
-
-		/* .metca group positions (scaled) - UPDATED */
-		.metca-1 { left: -20px; top: 100px; }
-		.metca-2 { top: 100px; left: -42.5px; }
-		.metca-3 { top: 90px; left: -10px; }
-		.metca-4 { left: -55px; top: 95px; }
-		.metca-5 { top: 65px; left: 335px; }
-
-		/* Individual icon, vector, h2, p positions (scaled) - UPDATED */
-		.icon-1 { top: -15px; left: 60px; }
-		.main-vector1 { top: 5px; left: 76px; width: 30px; }
-		.metca-1 h2 { top: -40px; }
-		.metca-1 p { left: 125px; top: 10px; }
-
-		.icon-2 { top: 85px; left: 240px; }
-		.main-vector2 { top: 105px; left: 255px; width: 30px }
-		.metca-2 h2 { top: 55px; left: 200px; }
-		.metca-2 p { top: 100px; left: 305px; }
-
-		.icon-3 { top: 220px; left: 25px; }
-		.main-vector3 { top: 235px; left: 42px; width: 30px }
-		.metca-3 h2 { top: 190px; left: -10px; }
-		.metca-3 p { top: 240px; left: 90px; }
-
-		.icon-4 { top: 170px; left: 390px; }
-		.main-vector4 { top: 185px; left: 402.5px; width: 40px }
-		.metca-4 h2 { top: 130px; left: 350px; }
-		.metca-4 p { top: 200px; left: 460px; font-size: 14px;}
-
-		.main-vector5 { top: 25px; left: 35px; width: 30px }
-		.metca-5 h2 { top: -15px; left: -15px; }
-		.metca-5 p { top: 30px; left: 90px; }
+	/* Individual icon, vector, h2, p positions (scaled) - UPDATED */
+	.icon-1 {
+		top: -21px;
+		left: 84px;
+	}
+	.main-vector1 {
+		top: 7px;
+		left: 106.4px;
+		width: 45px;
+	}
+	.metca-1 h2 {
+		top: -56px;
+	}
+	.metca-1 p {
+		left: 175px;
+		top: 14px;
 	}
 
-	/* Small Mobile: max-width 480px */
-	@media screen and (max-width: 480px) {
-		.map-bot {
-			padding: 24px 0; /* 80px * 0.3 */
-		}
-		.map-bot h1 {
-			font-size: 18px; /* 60px * 0.3 */
-			margin: 0 9px 15px 9px; /* 30px * 0.3, 50px * 0.3 */
-			line-height: 1.3;
-		}
-		.map-cont {
-			height: 240px; /* 800px * 0.3 */
-			max-width: 300px; /* 1000px * 0.3 */
-		}
-		.vector-line {
-			max-width: 300px; /* 1000px * 0.3 */
-		}
-		.metca-content {
-			width: 60px; /* 200px * 0.3 */
-			height: 60px; /* 200px * 0.3 */
-			margin-bottom: 6px; /* 20px * 0.3 */
-		}
-		.metca-content h2 {
-			font-size: 48px; /* 160px * 0.3 */
-		}
-		.metca-icon {
-			width: 37.2px; /* 124px * 0.3 */
-			height: 53.1px; /* 177px * 0.3 */
-		}
-		.metca p {
-			font-size: 9px; /* 30px * 0.3 */
-			line-height: 12px; /* 40px * 0.3 */
-		}
-
-		/* .metca group positions (scaled) - UPDATED */
-		.metca-1 { left: -12px; top: 60px; }
-		.metca-2 { top: 60px; left: -25.5px; }
-		.metca-3 { top: 54px; left: -6px; }
-		.metca-4 { left: -40px; top: 57px; }
-		.metca-5 { top: 39px; left: 201px; }
-
-		/* Individual icon, vector, h2, p positions (scaled) - UPDATED */
-		.icon-1 { top: -9px; left: 36px; }
-		.main-vector1 { top: 3px; left: 45.6px; width: 20px;}
-		.metca-1 h2 { top: -24px; }
-		.metca-1 p { left: 75px; top: 6px; }
-
-		.icon-2 { top: 51px; left: 144px; }
-		.main-vector2 { top: 60px; left: 152.7px; width: 20px; }
-		.metca-2 h2 { top: 33px; left: 120px; }
-		.metca-2 p { top: 60px; left: 183px; }
-
-		.icon-3 { top: 132px; left: 15px; }
-		.main-vector3 { top: 141px; left: 24px; width: 20px; }
-		.metca-3 h2 { top: 114px; left: -6px; }
-		.metca-3 p { top: 144px; left: 54px; }
-
-		.icon-4 { top: 102px; left: 234px; }
-		.main-vector4 { top: 111px; left: 241.5px; width: 23px; }
-		.metca-4 h2 { top: 78px; left: 210px; }
-		.metca-4 p { top: 120px; left: 276px; font-size: 8px; }
-
-		.main-vector5 { top: 15px; left: 20px; width: 20px; }
-		.metca-5 h2 { top: -9px; left: -9px; }
-		.metca-5 p { top: 18px; left: 54px; }
+	.icon-2 {
+		top: 119px;
+		left: 336px;
 	}
+	.main-vector2 {
+		top: 142px;
+		left: 356.6px;
+		width: 45px;
+	}
+	.metca-2 h2 {
+		top: 77px;
+		left: 280px;
+	}
+	.metca-2 p {
+		top: 140px;
+		left: 427px;
+	}
+
+	.icon-3 {
+		top: 308px;
+		left: 35px;
+	}
+	.main-vector3 {
+		top: 329px;
+		left: 56px;
+		width: 45px;
+	}
+	.metca-3 h2 {
+		top: 266px;
+		left: -14px;
+	}
+	.metca-3 p {
+		top: 336px;
+		left: 126px;
+	}
+
+	.icon-4 {
+		top: 238px;
+		left: 546px;
+	}
+	.main-vector4 {
+		top: 259px;
+		left: 563.5px;
+		width: 55px;
+	}
+	.metca-4 h2 {
+		top: 182px;
+		left: 490px;
+	}
+	.metca-4 p {
+		top: 280px;
+		left: 644px;
+	}
+
+	.main-vector5 {
+		top: 35px;
+		left: 49px;
+		width: 45px;
+	}
+	.metca-5 h2 {
+		top: -21px;
+		left: -21px;
+	}
+	.metca-5 p {
+		top: 42px;
+		left: 126px;
+	}
+}
+
+/* Mobile: max-width 768px */
+@media screen and (max-width: 768px) {
+	.map-bot {
+		padding: 40px 0; /* 80px * 0.5 */
+	}
+	.map-bot h1 {
+		font-size: 30px; /* 60px * 0.5 */
+		margin: 0 15px 25px 15px; /* 30px * 0.5, 50px * 0.5 */
+	}
+	.map-cont {
+		height: 400px; /* 800px * 0.5 */
+		max-width: 500px; /* 1000px * 0.5 */
+	}
+	.vector-line {
+		max-width: 500px; /* 1000px * 0.5 */
+	}
+	.metca-content {
+		width: 100px; /* 200px * 0.5 */
+		height: 100px; /* 200px * 0.5 */
+		margin-bottom: 10px; /* 20px * 0.5 */
+	}
+	.metca-content h2 {
+		font-size: 80px; /* 160px * 0.5 */
+	}
+	.metca-icon {
+		width: 62px; /* 124px * 0.5 */
+		height: 88.5px; /* 177px * 0.5 */
+	}
+	.metca p {
+		font-size: 15px; /* 30px * 0.5 */
+		line-height: 20px; /* 40px * 0.5 */
+	}
+
+	/* .metca group positions (scaled) - UPDATED */
+	.metca-1 {
+		left: -20px;
+		top: 100px;
+	}
+	.metca-2 {
+		top: 100px;
+		left: -42.5px;
+	}
+	.metca-3 {
+		top: 90px;
+		left: -10px;
+	}
+	.metca-4 {
+		left: -55px;
+		top: 95px;
+	}
+	.metca-5 {
+		top: 65px;
+		left: 335px;
+	}
+
+	/* Individual icon, vector, h2, p positions (scaled) - UPDATED */
+	.icon-1 {
+		top: -15px;
+		left: 60px;
+	}
+	.main-vector1 {
+		top: 5px;
+		left: 76px;
+		width: 30px;
+	}
+	.metca-1 h2 {
+		top: -40px;
+	}
+	.metca-1 p {
+		left: 125px;
+		top: 10px;
+	}
+
+	.icon-2 {
+		top: 85px;
+		left: 240px;
+	}
+	.main-vector2 {
+		top: 105px;
+		left: 255px;
+		width: 30px;
+	}
+	.metca-2 h2 {
+		top: 55px;
+		left: 200px;
+	}
+	.metca-2 p {
+		top: 100px;
+		left: 305px;
+	}
+
+	.icon-3 {
+		top: 220px;
+		left: 25px;
+	}
+	.main-vector3 {
+		top: 235px;
+		left: 42px;
+		width: 30px;
+	}
+	.metca-3 h2 {
+		top: 190px;
+		left: -10px;
+	}
+	.metca-3 p {
+		top: 240px;
+		left: 90px;
+	}
+
+	.icon-4 {
+		top: 170px;
+		left: 390px;
+	}
+	.main-vector4 {
+		top: 185px;
+		left: 402.5px;
+		width: 40px;
+	}
+	.metca-4 h2 {
+		top: 130px;
+		left: 350px;
+	}
+	.metca-4 p {
+		top: 200px;
+		left: 460px;
+		font-size: 14px;
+	}
+
+	.main-vector5 {
+		top: 25px;
+		left: 35px;
+		width: 30px;
+	}
+	.metca-5 h2 {
+		top: -15px;
+		left: -15px;
+	}
+	.metca-5 p {
+		top: 30px;
+		left: 90px;
+	}
+}
+
+/* Small Mobile: max-width 480px */
+@media screen and (max-width: 480px) {
+	.map-bot {
+		padding: 24px 0; /* 80px * 0.3 */
+	}
+	.map-bot h1 {
+		font-size: 18px; /* 60px * 0.3 */
+		margin: 0 9px 15px 9px; /* 30px * 0.3, 50px * 0.3 */
+		line-height: 1.3;
+	}
+	.map-cont {
+		height: 240px; /* 800px * 0.3 */
+		max-width: 300px; /* 1000px * 0.3 */
+	}
+	.vector-line {
+		max-width: 300px; /* 1000px * 0.3 */
+	}
+	.metca-content {
+		width: 60px; /* 200px * 0.3 */
+		height: 60px; /* 200px * 0.3 */
+		margin-bottom: 6px; /* 20px * 0.3 */
+	}
+	.metca-content h2 {
+		font-size: 48px; /* 160px * 0.3 */
+	}
+	.metca-icon {
+		width: 37.2px; /* 124px * 0.3 */
+		height: 53.1px; /* 177px * 0.3 */
+	}
+	.metca p {
+		font-size: 9px; /* 30px * 0.3 */
+		line-height: 12px; /* 40px * 0.3 */
+	}
+
+	/* .metca group positions (scaled) - UPDATED */
+	.metca-1 {
+		left: -12px;
+		top: 60px;
+	}
+	.metca-2 {
+		top: 60px;
+		left: -25.5px;
+	}
+	.metca-3 {
+		top: 54px;
+		left: -6px;
+	}
+	.metca-4 {
+		left: -40px;
+		top: 57px;
+	}
+	.metca-5 {
+		top: 39px;
+		left: 201px;
+	}
+
+	/* Individual icon, vector, h2, p positions (scaled) - UPDATED */
+	.icon-1 {
+		top: -9px;
+		left: 36px;
+	}
+	.main-vector1 {
+		top: 3px;
+		left: 45.6px;
+		width: 20px;
+	}
+	.metca-1 h2 {
+		top: -24px;
+	}
+	.metca-1 p {
+		left: 75px;
+		top: 6px;
+	}
+
+	.icon-2 {
+		top: 51px;
+		left: 144px;
+	}
+	.main-vector2 {
+		top: 60px;
+		left: 152.7px;
+		width: 20px;
+	}
+	.metca-2 h2 {
+		top: 33px;
+		left: 120px;
+	}
+	.metca-2 p {
+		top: 60px;
+		left: 183px;
+	}
+
+	.icon-3 {
+		top: 132px;
+		left: 15px;
+	}
+	.main-vector3 {
+		top: 141px;
+		left: 24px;
+		width: 20px;
+	}
+	.metca-3 h2 {
+		top: 114px;
+		left: -6px;
+	}
+	.metca-3 p {
+		top: 144px;
+		left: 54px;
+	}
+
+	.icon-4 {
+		top: 102px;
+		left: 234px;
+	}
+	.main-vector4 {
+		top: 111px;
+		left: 241.5px;
+		width: 23px;
+	}
+	.metca-4 h2 {
+		top: 78px;
+		left: 210px;
+	}
+	.metca-4 p {
+		top: 120px;
+		left: 276px;
+		font-size: 8px;
+	}
+
+	.main-vector5 {
+		top: 15px;
+		left: 20px;
+		width: 20px;
+	}
+	.metca-5 h2 {
+		top: -9px;
+		left: -9px;
+	}
+	.metca-5 p {
+		top: 18px;
+		left: 54px;
+	}
+}
