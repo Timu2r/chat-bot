@@ -1,5 +1,6 @@
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-family: -apple-system, BlinkMacMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
 }
 
 .section-avto {
@@ -32,16 +33,7 @@ body {
 }
 
 .screen-background {
-	width: 930px;
-	height: 640px;
-	position: absolute;
-	top: 6%;
-	left: 50%;
-	transform: translateX(-50%);
-	background: url('../assets/fon.jpg') no-repeat center center / cover;
-	border-radius: 12px;
-	z-index: 1;
-	opacity: 0.4;
+
 }
 
 .screen-content {
@@ -66,9 +58,6 @@ body {
 	font-size: 42px;
 	font-weight: 700;
 	color: #1a365d;
-	margin: 0 0 60px 0;
-	align-self: start;
-	text-align: center;
 }
 
 .avto-list {
@@ -134,8 +123,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 470px;
-	height: 310px;
+	width: 430px;
+	height: 350px;
 	margin: 0 auto;
 }
 
@@ -143,7 +132,7 @@ body {
 	height: auto;
 	z-index: -1;
 	position: relative;
-	bottom: -30px;
+	bottom: -10px;
 	right: 40px;
 }
 
@@ -153,6 +142,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	width: 50px;
 }
 
 .app-icon {
@@ -163,225 +153,497 @@ body {
 	object-fit: contain;
 }
 
-/* Адаптация для ширины 1040px */
+/* Tablet: max-width 1040px */
 @media screen and (max-width: 1040px) {
 	.container-avto {
-		padding: 40px 15px;
+		width: 90%; /* Adjusted for better flow on tablets */
 	}
 
-	.screen-background {
-		width: 770px;
-		height: 520px;
-		display: none;
-	}
-
-	.screen-content {
-		width: 820px;
-		height: 520px;
-		padding: 60px 50px;
-		gap: 15px;
-	}
-
-	.screen-content h1 {
-		font-size: 32px;
-		margin-bottom: 40px;
-	}
-
-	.avto-item {
-		width: 300px;
-		height: 60px;
-		gap: 15px;
-	}
-
-	.avto-icon {
-		width: 55px;
-		height: 55px;
-	}
-
-	.avto-icon img {
-		width: 38px;
-		height: 35px;
-	}
-
-	.avto-text {
-		font-size: 15px;
-	}
-
-	.integration-item {
-		width: 300px;
-		height: 60px;
-		gap: 15px;
-		margin-bottom: 30px;
-	}
-
-	.phone-container {
-		width: 400px;
-		height: 270px;
-	}
-
-	.app-icon {
-		width: 38px;
-		height: 37px;
-	}
-	.phone-img {
-		height: 360px;
-		z-index: -1;
-		position: relative;
-		bottom: 0;
-		right: 40px;
-	}
-}
-
-/* Адаптация для ширины 320px - мини версия */
-@media screen and (max-width: 320px) {
-	.container-avto {
-		padding: 20px 10px;
-	}
-
-	/* Скрываем изображение ноутбука на мобильных */
 	.laptop-img {
-		display: none;
+		max-width: 864px; /* 1200*0.72 */
 	}
 
 	.screen-background {
-		position: relative;
-		width: 100%;
-		height: auto;
-		min-height: 600px;
-		top: 0;
-		left: 0;
-		transform: none;
-		border-radius: 8px;
-		margin-bottom: 20px;
+		display: none; /* Hide background on smaller screens */
 	}
 
 	.screen-content {
-		position: relative;
-		width: 100%;
-		height: auto;
-		top: 0;
-		left: 0;
-		transform: none;
-		display: flex;
-		flex-direction: column;
-		padding: 20px 15px;
-		background: rgba(255, 255, 255, 0.95);
-		border-radius: 8px;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+		width: 670px; /* 930*0.72 */
+		height: 461px; /* 640*0.72 */
+		padding: 50px 43px; /* 70*0.72, 60*0.72 */
+		gap: 7px; /* 10*0.72 */
 	}
 
-	.screen-content h1 {
-		font-size: 20px;
-		margin-bottom: 25px;
-		text-align: center;
-		line-height: 1.3;
+	.section-avto h1 {
+		font-size: 30px; /* 42*0.72 */
+		margin-bottom: 43px; /* 60*0.72 */
 	}
 
 	.avto-list {
-		margin-bottom: 30px;
-		gap: 12px;
+		gap: 5px; /* 10*0.5 */
 	}
 
 	.avto-item {
-		width: 100%;
-		height: 50px;
-		gap: 12px;
+		width: 279px; /* 388*0.72 */
+		height: 56px; /* 78*0.72 */
+		gap: 14px; /* 20*0.72 */
 	}
 
 	.avto-icon {
-		width: 45px;
-		height: 45px;
-		flex-shrink: 0;
+		width: 50px; /* 70*0.72 */
+		height: 50px;
 	}
 
 	.avto-icon img {
-		width: 28px;
-		height: 26px;
+		width: 36px; /* 50*0.72 */
+		height: 33px; /* 46*0.72 */
 	}
 
 	.avto-text {
-		font-size: 13px;
-		line-height: 1.4;
-		flex: 1;
+		font-size: 13px; /* 18*0.72 */
 	}
 
 	.integration-section {
-		align-items: center;
+		/* Keep grid-area, flex-direction, align-items, justify-self */
 	}
 
 	.integration-item {
-		width: 100%;
-		height: 50px;
-		gap: 12px;
-		margin-bottom: 20px;
+		width: 279px; /* 388*0.72 */
+		height: 56px; /* 78*0.72 */
+		gap: 14px; /* 20*0.72 */
+		margin-bottom: 29px; /* 40*0.72 */
 	}
 
 	.phone-container {
-		width: 280px;
-		height: 180px;
-		margin: 20px auto 0;
+		width: 338px; /* 470*0.72 */
+		height: 223px; /* 310*0.72 */
 	}
 
 	.phone-img {
-		width: 120px;
-		height: auto;
-		bottom: 20px;
-		right: 20px;
+		width: 350px; /* Adjusted to maintain aspect ratio with phone-container */
+		bottom: 2px; /* -30*0.72 */
+		right: 29px; /* 40*0.72 */
 	}
 
 	.app-icon {
-		width: 28px;
-		height: 27px;
-		border-radius: 8px;
+		width: 36px; /* 50*0.72 */
+		height: 35px; /* 49*0.72 */
+		border-radius: 9px; /* 12*0.72 */
+	}
+}
+
+/* Mobile: max-width 768px */
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 14px; /* Adjust base font size for better readability on mobile */
+	}
+	.container-avto {
+		padding: 30px 10px; /* 60*0.5, 20*0.5 */
+		width: 95%; /* Even wider on mobile */
 	}
 
-	/* Позиционирование иконок приложений для мобильной версии */
+	.laptop-img {
+		width: 540px; /* 1200*0.5 */
+	}
+
+	.screen-content {
+		width: 465px; /* 930*0.5 */
+		height: 320px; /* 640*0.5 */
+		padding: 35px 30px; /* 70*0.5, 60*0.5 */
+		gap: 5px; /* 10*0.5 */
+	}
+
+	.section-avto h1 {
+		font-size: 21px; /* 42*0.5 */
+		margin-bottom: 30px; /* 60*0.5 */
+	}
+
+	.avto-list {
+		gap: 5px; /* 10*0.5 */
+	}
+
+	.avto-item {
+		width: 194px; /* 388*0.5 */
+		height: 39px; /* 78*0.5 */
+		gap: 10px; /* 20*0.5 */
+	}
+
+	.avto-icon {
+		width: 35px; /* 70*0.5 */
+		height: 35px;
+	}
+
+	.avto-icon img {
+		width: 25px; /* 50*0.5 */
+		height: 23px; /* 46*0.5 */
+	}
+
+	.avto-text {
+		font-size: 9px; /* 18*0.5 */
+		line-height: 1.4;
+	}
+
+	.integration-item {
+		width: 194px; /* 388*0.5 */
+		height: 39px; /* 78*0.5 */
+		gap: 10px; /* 20*0.5 */
+		margin-bottom: 20px; /* 40*0.5 */
+	}
+
+	.phone-container {
+		width: 200px; /* 470*0.5 */
+		height: 155px; /* 310*0.5 */
+		right: 30px;
+		bottom: 35px;
+	}
+
+	.phone-img {
+		width: 180px; /* Adjusted */
+		bottom: -15px; /* -30*0.5 */
+		right: 20px; /* 40*0.5 */
+	}
+
+	.app-icon {
+		width: 25px; /* 50*0.5 */
+		height: 24.5px; /* 49*0.5 */
+		border-radius: 6px; /* 12*0.5 */
+	}
+
+	/* Specific positioning for app icons on smaller screens */
 	.app-icon:nth-child(1) {
-		top: 10px;
-		right: 60px;
+		top: 2%;
+		right: 40%;
 	}
 	.app-icon:nth-child(2) {
-		top: 10px;
-		right: 20px;
+		top: 2%;
+		right: 28%;
 	}
 	.app-icon:nth-child(3) {
-		top: 45px;
-		right: 80px;
+		top: 2%;
+		right: 16%;
 	}
 	.app-icon:nth-child(4) {
-		top: 45px;
-		right: 40px;
+		top: 12%;
+		right: 45%;
 	}
 	.app-icon:nth-child(5) {
-		top: 80px;
-		right: 60px;
+		top: 12%;
+		right: 33%;
 	}
 	.app-icon:nth-child(6) {
-		top: 80px;
-		right: 20px;
+		top: 12%;
+		right: 21%;
 	}
 	.app-icon:nth-child(7) {
-		top: 115px;
-		right: 80px;
+		top: 22%;
+		right: 40%;
 	}
 	.app-icon:nth-child(8) {
-		top: 115px;
-		right: 40px;
+		top: 22%;
+		right: 28%;
 	}
 	.app-icon:nth-child(9) {
-		top: 150px;
-		right: 60px;
+		top: 22%;
+		right: 16%;
 	}
 	.app-icon:nth-child(10) {
-		top: 150px;
-		right: 20px;
+		top: 32%;
+		right: 45%;
 	}
 	.app-icon:nth-child(11) {
-		top: 20px;
-		left: 20px;
+		top: 32%;
+		right: 33%;
 	}
 	.app-icon:nth-child(12) {
-		top: 60px;
-		left: 20px;
+		top: 32%;
+		right: 21%;
+	}
+}
+
+/* Small Mobile: max-width 480px */
+@media screen and (max-width: 480px) {
+	.container-avto {
+		padding: 19px 6px; /* 60*0.32, 20*0.32 */
+		width: 100%; /* Full width to be flexible */
+		max-width: 480px; /* Constrain container on small screens */
+	}
+	.laptop-wrapper {
+		/* No changes needed here, default flex-direction: row */
+	}
+	.laptop-img {
+		max-width: 384px; /* 1200 * 0.32 */
+	}
+	.screen-background {
+		display: none;
+	}
+	.screen-content {
+		position: absolute; /* Keep absolute positioning */
+		top: 0; /* Keep original top */
+		left: 50%; /* Keep original left */
+		transform: translateX(-50%); /* Keep original transform */
+		width: 260px; /* 930 * 0.32 */
+		height: 206px; /* 640 * 0.32 */
+		padding: 22px 19px; /* 70*0.32, 60*0.32 */
+		grid-template-columns: 1fr 1fr; /* Keep two columns */
+		grid-template-rows: auto 1fr;
+		grid-template-areas:
+			'title title'
+			'features integration';
+		z-index: 3; /* Keep original z-index */
+		gap: 3px; /* 10 * 0.32 */
+	}
+
+	.section-avto h1 {
+		font-size: 14px; /* 42 * 0.32 */
+		margin-bottom: 19px; /* 60 * 0.32 */
+		text-align: left; /* Revert to left align */
+	}
+
+	.avto-list {
+		gap: 3px; /* 10 * 0.32 */
+		align-items: flex-start; /* Revert to flex-start */
+	}
+
+	.avto-item {
+		width: 124px; /* 388 * 0.32 */
+		height: auto; /* Allow height to adjust based on content */
+		gap: 6px; /* 20 * 0.32 */
+	}
+
+	.app-icons {
+		width: 120px;
+		height: 85px;
+	}
+
+	.avto-icon {
+		width: 22px; /* 70 * 0.32 */
+		height: 22px; /* 70 * 0.32 */
+	}
+
+	.avto-icon img {
+		width: 16px; /* 50 * 0.32 */
+		height: 15px; /* 46 * 0.32 */
+	}
+
+	.avto-text {
+		font-size: 6px; /* 18 * 0.32 */
+		line-height: 150%; /* Keep original line-height */
+		max-width: 100px;
+		white-space: normal; /* Allow text to wrap */
+		word-wrap: break-word; /* Ensure long words break */
+	}
+
+	.integration-section {
+		align-items: flex-start; /* Revert to flex-start */
+	}
+
+	.integration-item {
+		width: 124px; /* 388 * 0.32 */
+		height: auto; /* Allow height to adjust based on content */
+		gap: 6px; /* 20 * 0.32 */
+		margin-bottom: 13px; /* 40 * 0.32 */
+	}
+
+	.phone-container {
+		width: 130px; /* 470 * 0.32258... rounded to 151 */
+		height: 100px; /* 310 * 0.32258... rounded to 100 */
+		right: 10px;
+		bottom: 0;
+	}
+
+	.phone-img {
+		width: 131px; /* 470 * 0.32 */
+		bottom: 10px; /* -30 * 0.32 */
+		right: 13px; /* 40 * 0.32 */
+	}
+
+	.app-icon {
+		width: 16px; /* 50 * 0.32 */
+		height: 15px; /* 49 * 0.32 */
+		border-radius: 4px; /* 12 * 0.32 */
+	}
+
+	/* Re-position app icons for small mobile to fit scaled phone screen */
+	.app-icon:nth-child(1) {
+		top: 5%;
+		right: 40%;
+	}
+	.app-icon:nth-child(2) {
+		top: 5%;
+		right: 28%;
+	}
+	.app-icon:nth-child(3) {
+		top: 5%;
+		right: 16%;
+	}
+	.app-icon:nth-child(4) {
+		top: 15%;
+		right: 45%;
+	} /* Adjusted slightly more */
+	.app-icon:nth-child(5) {
+		top: 15%;
+		right: 33%;
+	}
+	.app-icon:nth-child(6) {
+		top: 15%;
+		right: 21%;
+	}
+	.app-icon:nth-child(7) {
+		top: 25%;
+		right: 40%;
+	}
+	.app-icon:nth-child(8) {
+		top: 25%;
+		right: 28%;
+	}
+	.app-icon:nth-child(9) {
+		top: 25%;
+		right: 16%;
+	}
+	.app-icon:nth-child(10) {
+		top: 35%;
+		right: 45%;
+	}
+	.app-icon:nth-child(11) {
+		top: 35%;
+		right: 33%;
+	}
+	.app-icon:nth-child(12) {
+		top: 35%;
+		right: 21%;
+	}
+}
+
+/* New breakpoint for max-width 320px */
+@media screen and (max-width: 320px) {
+	.container-avto {
+		padding: 13px 4px; /* 60*0.22, 20*0.22 */
+		max-width: 320px;
+	}
+	.laptop-img {
+		max-width: 264px; /* Revert to responsive max-width */
+		width: 100%; /* Ensure it scales within max-width */
+	}
+	.screen-background {
+		display: none; /* Keep hidden for 320px */
+	}
+	.screen-content {
+		width: 204px; /* 930 * 0.22 */
+		height: 141px; /* 640 * 0.22 */
+		padding: 15px 13px; /* 70*0.22, 60*0.22, rounded */
+		gap: 2px; /* 10*0.22, rounded */
+	}
+
+	.section-avto h1 {
+		font-size: 9px; /* 42 * 0.22 */
+		margin-bottom: 13px; /* 60 * 0.22, rounded */
+		text-align: center;
+		line-height: 1.2; /* Adjusted for better flow */
+	}
+
+	.avto-list {
+		gap: 2px; /* 10*0.22, rounded */
+	}
+
+	.avto-item {
+		width: 85px; /* 388 * 0.22, rounded */
+		height: auto;
+		gap: 4px; /* 20*0.22, rounded */
+	}
+
+	.avto-icon {
+		width: 15px; /* 70*0.22, rounded */
+		height: 15px;
+	}
+	.avto-icon img {
+		width: 11px; /* 50*0.22, rounded */
+		height: 10px; /* 46*0.22, rounded */
+	}
+
+	.avto-text {
+		font-size: 4px; /* 18*0.22, rounded */
+		line-height: 1.3;
+		max-width: 80px; /* Constrain text width */
+		white-space: normal;
+		word-wrap: break-word;
+	}
+
+	.integration-section {
+		/* Keep original display properties */
+	}
+	.integration-item {
+		width: 85px; /* 388*0.22, rounded */
+		height: auto;
+		gap: 4px; /* 20*0.22, rounded */
+		margin-bottom: 9px; /* 40*0.22, rounded */
+	}
+
+	.phone-container {
+		width: 103px; /* 470*0.22, rounded */
+		height: 68px; /* 310*0.22, rounded */
+	}
+	.phone-img {
+		width: 103px; /* Match phone-container width */
+		bottom: -7px; /* -30*0.22, rounded */
+		right: 9px; /* 40*0.22, rounded */
+	}
+	.app-icons {
+		width: 100%; /* Take full width of parent */
+		height: 100%; /* Take full height of parent */
+	}
+	.app-icon {
+		width: 11px; /* 50*0.22, rounded */
+		height: 11px; /* 49*0.22, rounded */
+		border-radius: 3px; /* 12*0.22, rounded */
+	}
+
+	/* Re-position app icons for very small mobile to fit scaled phone screen */
+	.app-icon:nth-child(1) {
+		top: 5%;
+		left: 5%;
+	}
+	.app-icon:nth-child(2) {
+		top: 5%;
+		left: 35%;
+	}
+	.app-icon:nth-child(3) {
+		top: 5%;
+		left: 65%;
+	}
+	.app-icon:nth-child(4) {
+		top: 25%;
+		left: 5%;
+	}
+	.app-icon:nth-child(5) {
+		top: 25%;
+		left: 35%;
+	}
+	.app-icon:nth-child(6) {
+		top: 25%;
+		left: 65%;
+	}
+	.app-icon:nth-child(7) {
+		top: 45%;
+		left: 5%;
+	}
+	.app-icon:nth-child(8) {
+		top: 45%;
+		left: 35%;
+	}
+	.app-icon:nth-child(9) {
+		top: 45%;
+		left: 65%;
+	}
+	.app-icon:nth-child(10) {
+		top: 65%;
+		left: 5%;
+	}
+	.app-icon:nth-child(11) {
+		top: 65%;
+		left: 35%;
+	}
+	.app-icon:nth-child(12) {
+		top: 65%;
+		left: 65%;
 	}
 }

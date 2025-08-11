@@ -1,14 +1,13 @@
-
-body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+.chatbot-section {
+	background: linear-gradient(180deg, #ffffff -60%, #94c3f7 100.81%);
 }
 
-
-/* Chatbot Section Styles */
-.chatbot-section {
+.cercle-cont {
 	padding: 80px 0;
-	text-align: center;
-	background: linear-gradient(180deg, #ffffff -60%, #94c3f7 100.81%);
+	position: relative;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .section-title {
@@ -43,24 +42,22 @@ body {
 	justify-content: center;
 	z-index: 10;
 	transition: 0.5s all;
-	animation: center-vibrate 2s linear infinite;
+	animation: center-pulse 3s ease-in-out infinite;
 }
 
-@keyframes center-vibrate {
+/* Обновленная анимация пульсации центра */
+@keyframes center-pulse {
 	0% {
-		transform: translate(-50%, -50%) rotate(0deg);
-	}
-	25% {
-		transform: translate(-50%, -50%) rotate(2deg);
+		transform: translate(-50%, -50%) scale(1);
+		box-shadow: 0 0 0 0 rgba(88, 174, 255, 0.7);
 	}
 	50% {
-		transform: translate(-50%, -50%) rotate(0deg);
-	}
-	75% {
-		transform: translate(-50%, -50%) rotate(-2deg);
+		transform: translate(-50%, -50%) scale(1.1);
+		box-shadow: 0 0 0 20px rgba(88, 174, 255, 0);
 	}
 	100% {
-		transform: translate(-50%, -50%) rotate(0deg);
+		transform: translate(-50%, -50%) scale(1);
+		box-shadow: 0 0 0 0 rgba(88, 174, 255, 0);
 	}
 }
 
@@ -136,7 +133,7 @@ body {
 
 .orbit-item:hover {
 	box-shadow: 0 6px 20px #58aeff;
-	transform: scale(1.1);
+	transform: scale(1.2); /* Увеличение при ховере */
 }
 
 .orbit-item img {
@@ -235,7 +232,7 @@ body {
 	margin-left: -5px;
 }
 
-/* Анимация вращения для элементов */
+/* Замедленная анимация вращения для элементов */
 @keyframes orbit-rotation {
 	0% {
 		transform: rotate(0deg) translateX(250px) rotate(0deg);
@@ -255,9 +252,9 @@ body {
 	}
 }
 
-/* Общие стили для вращающихся элементов */
+/* Общие стили для вращающихся элементов - замедленная анимация */
 .orbit-item {
-	animation: orbit-rotation 20s linear infinite;
+	animation: orbit-rotation 40s linear infinite; /* Увеличено с 20s до 40s */
 }
 
 /* Распределение элементов с разными стартовыми позициями */
@@ -265,21 +262,21 @@ body {
 	animation-delay: 0s;
 }
 .support {
-	animation-delay: -4s;
+	animation-delay: -8s; /* Обновлено для новой скорости */
 }
 .b2b {
-	animation-delay: -8s;
+	animation-delay: -16s;
 }
 .hr {
-	animation-delay: -12s;
+	animation-delay: -24s;
 }
 .services {
-	animation-delay: -16s;
+	animation-delay: -32s;
 }
 
 /* Стили для точек на первой орбите */
 .orbit-dot {
-	animation: orbit-1-rotation 20s linear infinite;
+	animation: orbit-1-rotation 40s linear infinite; /* Замедлено */
 	transform-origin: center;
 }
 
@@ -288,16 +285,16 @@ body {
 	animation-delay: 0s;
 }
 .dot-2 {
-	animation-delay: -4s;
-}
-.dot-3 {
 	animation-delay: -8s;
 }
+.dot-3 {
+	animation-delay: -16s;
+}
 .dot-4 {
-	animation-delay: -12s;
+	animation-delay: -24s;
 }
 .dot-5 {
-	animation-delay: -16s;
+	animation-delay: -32s;
 }
 
 /* Стили для соединительных линий */
@@ -312,441 +309,248 @@ body {
 	z-index: 1;
 }
 
-/* Остановка анимации при наведении */
+/* Остановка анимации при наведении на диаграмму */
 .diagram-container:hover .orbit-item,
 .diagram-container:hover .orbit-dot {
 	animation-play-state: paused;
 }
 
-/* Адаптация chatbot section для ширины 1040px */
+/* ПЛАНШЕТЫ до 1040px - пропорционально уменьшаем */
 @media screen and (max-width: 1040px) {
 	.chatbot-section {
-		padding: 60px 20px;
+		padding: 58px 0; /* 80*0.72 */
 	}
-	
+
 	.section-title {
-		font-size: 28px;
-		margin-bottom: 40px;
+		font-size: 26px; /* 36*0.72 */
+		margin-bottom: 43px; /* 60*0.72 */
 	}
-	
+
 	.diagram-container {
-		width: 500px;
-		height: 500px;
+		width: 504px; /* 700*0.72 */
+		height: 504px;
+		border-radius: 14px; /* 20*0.72 */
 	}
-	
+
 	.center-circle {
-		width: 80px;
-		height: 80px;
+		width: 72px;
+		height: 72px;
 	}
-	
+
 	.center-circle img {
-		width: 40px;
-		height: 40px;
+		width: 36px; /* 50*0.72 */
+		height: 36px;
 	}
-	
+
 	.back-circle {
-		width: 120px;
-		height: 120px;
+		width: 108px; /* 150*0.72 */
+		height: 108px;
 	}
-	
+
 	.back-circle-lock {
-		width: 140px;
-		height: 140px;
+		width: 137px; /* 190*0.72 */
+		height: 137px;
 	}
-	
+
 	.orbit-item {
-		width: 70px;
-		height: 70px;
-		margin-top: -35px;
-		margin-left: -35px;
-		transform-origin: center -165px;
+		width: 65px; /* 90*0.72 */
+		height: 65px;
+		margin-top: -32.5px;
+		margin-left: -32.5px;
+		transform-origin: center -166px; /* 230*0.72 */
 	}
-	
+
 	.orbit-img-cont {
-		width: 70px;
-		height: 70px;
+		width: 65px;
+		height: 65px;
 	}
-	
+
 	.orbit-item img {
-		width: 26px;
-		height: 26px;
+		width: 23px; /* 32*0.72 */
+		height: 23px;
 	}
-	
+
 	.orbit-label {
-		top: 70px;
-		font-size: 12px;
+		top: 65px; /* 90*0.72 */
+		font-size: 10px; /* 14*0.72 */
 	}
-	
+
 	.orbit-tooltip {
-		font-size: 12px;
+		font-size: 10px;
 		padding: 6px 12px;
+		top: -58px; /* 80*0.72 */
 	}
-	
+
 	.orbit-1 {
-		width: 150px;
-		height: 150px;
+		width: 144px; /* 200*0.72 */
+		height: 144px;
 	}
-	
+
 	.orbit-2 {
-		width: 250px;
-		height: 250px;
+		width: 252px; /* 350*0.72 */
+		height: 252px;
 	}
-	
+
 	.orbit-3 {
-		width: 350px;
-		height: 350px;
+		width: 360px; /* 500*0.72 */
+		height: 360px;
 	}
-	
+
+	.orbit-dot {
+		width: 7px; /* 10*0.72 */
+		height: 7px;
+		margin-top: -3.5px;
+		margin-left: -3.5px;
+	}
+
 	@keyframes orbit-rotation {
 		0% {
-			transform: rotate(0deg) translateX(175px) rotate(0deg);
+			transform: rotate(0deg) translateX(180px) rotate(0deg); /* 250*0.72 */
 		}
 		100% {
-			transform: rotate(360deg) translateX(175px) rotate(-360deg);
+			transform: rotate(360deg) translateX(180px) rotate(-360deg);
 		}
 	}
-	
+
 	@keyframes orbit-1-rotation {
 		0% {
-			transform: rotate(0deg) translateX(75px) rotate(0deg);
+			transform: rotate(0deg) translateX(72px) rotate(0deg); /* 100*0.72 */
 		}
 		100% {
-			transform: rotate(360deg) translateX(75px) rotate(-360deg);
+			transform: rotate(360deg) translateX(72px) rotate(-360deg);
 		}
 	}
 }
 
-/* Адаптация chatbot section для ширины 320px */
-@media screen and (max-width: 576px) {
+/* МОБИЛЬНЫЕ до 320px - миниатюрная версия */
+@media screen and (max-width: 320px) {
 	.chatbot-section {
-		padding: 40px 15px;
+		padding: 18px 0; /* 80*0.22 */
 	}
-	
+
 	.section-title {
-		font-size: 22px;
-		margin-bottom: 30px;
+		font-size: 8px; /* 36*0.22 */
+		margin-bottom: 13px; /* 60*0.22 */
 		line-height: 1.3;
 	}
-	
+
 	.diagram-container {
-		width: 300px;
-		height: 300px;
+		width: 154px; /* 700*0.22 */
+		height: 154px;
+		border-radius: 4px; /* 20*0.22 */
 	}
-	
+
 	.center-circle {
-		width: 60px;
-		height: 60px;
+		width: 22px; /* 100*0.22 */
+		height: 22px;
 	}
-	
+
 	.center-circle img {
-		width: 30px;
-		height: 30px;
+		width: 11px; /* 50*0.22 */
+		height: 11px;
 	}
-	
+
 	.back-circle {
-		width: 90px;
-		height: 90px;
+		width: 33px; /* 150*0.22 */
+		height: 33px;
 	}
-	
+
 	.back-circle-lock {
-		width: 110px;
-		height: 110px;
+		width: 42px; /* 190*0.22 */
+		height: 42px;
 	}
-	
+
 	.orbit-item {
-		width: 50px;
-		height: 50px;
-		margin-top: -25px;
-		margin-left: -25px;
-		transform-origin: center -100px;
+		width: 20px; /* 90*0.22 */
+		height: 20px;
+		margin-top: -10px;
+		margin-left: -10px;
+		transform-origin: center -51px; /* 230*0.22 */
 	}
-	
+
 	.orbit-img-cont {
-		width: 50px;
-		height: 50px;
-	}
-	
-	.orbit-item img {
 		width: 20px;
 		height: 20px;
 	}
-	
-	.orbit-label {
-		top: 50px;
-		font-size: 10px;
-	}
-	
-	.orbit-tooltip {
-		font-size: 10px;
-		padding: 4px 8px;
-		top: -60px;
-	}
-	
-	.orbit-tooltip::after {
-		border-left: 4px solid transparent;
-		border-right: 4px solid transparent;
-		border-top: 4px solid #ffffff;
-		bottom: -4px;
-	}
-	
-	.orbit-1 {
-		width: 100px;
-		height: 100px;
-	}
-	
-	.orbit-2 {
-		width: 150px;
-		height: 150px;
-	}
-	
-	.orbit-3 {
-		width: 200px;
-		height: 200px;
-	}
-	
-	.orbit-dot {
-		width: 6px;
-		height: 6px;
-		margin-top: -3px;
-		margin-left: -3px;
-	}
-	
-	@keyframes orbit-rotation {
-		0% {
-			transform: rotate(0deg) translateX(100px) rotate(0deg);
-		}
-		100% {
-			transform: rotate(360deg) translateX(100px) rotate(-360deg);
-		}
-	}
-	
-	@keyframes orbit-1-rotation {
-		0% {
-			transform: rotate(0deg) translateX(50px) rotate(0deg);
-		}
-		100% {
-			transform: rotate(360deg) translateX(50px) rotate(-360deg);
-		}
-	}
-}
 
-/* Адаптация для очень маленьких экранов 320px */
-@media screen and (max-width: 320px) {
-	/* Chatbot section для 320px */
-	.chatbot-section {
-		padding: 30px 10px;
-	}
-	
-	.section-title {
-		font-size: 18px;
-		margin-bottom: 25px;
-	}
-	
-	.diagram-container {
-		width: 280px;
-		height: 280px;
-	}
-	
-	.center-circle {
-		width: 50px;
-		height: 50px;
-	}
-	
-	.center-circle img {
-		width: 25px;
-		height: 25px;
-	}
-	
-	.back-circle {
-		width: 75px;
-		height: 75px;
-	}
-	
-	.back-circle-lock {
-		width: 95px;
-		height: 95px;
-	}
-	
-	.orbit-item {
-		width: 45px;
-		height: 45px;
-		margin-top: -22.5px;
-		margin-left: -22.5px;
-		transform-origin: center -90px;
-	}
-	
-	.orbit-img-cont {
-		width: 45px;
-		height: 45px;
-	}
-	
 	.orbit-item img {
-		width: 18px;
-		height: 18px;
+		width: 7px; /* 32*0.22 */
+		height: 7px;
 	}
-	
+
 	.orbit-label {
-		top: 45px;
-		font-size: 9px;
+		top: 20px; /* 90*0.22 */
+		font-size: 3px; /* 14*0.22 */
 	}
-	
+
+	.orbit-tooltip {
+		font-size: 3px;
+		padding: 2px 4px;
+		top: -18px; /* 80*0.22 */
+		border-radius: 2px;
+	}
+
+	.orbit-tooltip::after {
+		border-left: 1px solid transparent;
+		border-right: 1px solid transparent;
+		border-top: 1px solid #ffffff;
+		bottom: -1px;
+	}
+
 	.orbit-1 {
-		width: 90px;
-		height: 90px;
+		width: 44px; /* 200*0.22 */
+		height: 44px;
 	}
-	
+
 	.orbit-2 {
-		width: 130px;
-		height: 130px;
+		width: 77px; /* 350*0.22 */
+		height: 77px;
 	}
-	
+
 	.orbit-3 {
-		width: 180px;
-		height: 180px;
+		width: 110px; /* 500*0.22 */
+		height: 110px;
 	}
-	
+
+	.orbit-dot {
+		width: 2px; /* 10*0.22 */
+		height: 2px;
+		margin-top: -1px;
+		margin-left: -1px;
+		border: 1px solid #012547;
+	}
+
 	@keyframes orbit-rotation {
 		0% {
-			transform: rotate(0deg) translateX(90px) rotate(0deg);
+			transform: rotate(0deg) translateX(55px) rotate(0deg); /* 250*0.22 */
 		}
 		100% {
-			transform: rotate(360deg) translateX(90px) rotate(-360deg);
+			transform: rotate(360deg) translateX(55px) rotate(-360deg);
 		}
 	}
-	
+
 	@keyframes orbit-1-rotation {
 		0% {
-			transform: rotate(0deg) translateX(45px) rotate(0deg);
+			transform: rotate(0deg) translateX(22px) rotate(0deg); /* 100*0.22 */
 		}
 		100% {
-			transform: rotate(360deg) translateX(45px) rotate(-360deg);
+			transform: rotate(360deg) translateX(22px) rotate(-360deg);
 		}
 	}
-	.header {
-		height: 70px;
-		padding: 8px 0;
+
+	/* Центральный элемент для мобильных */
+	@keyframes center-pulse {
+		0% {
+			transform: translate(-50%, -50%) scale(1);
+			box-shadow: 0 0 0 0 rgba(88, 174, 255, 0.7);
+		}
+		50% {
+			transform: translate(-50%, -50%) scale(1.1);
+			box-shadow: 0 0 0 4px rgba(88, 174, 255, 0); /* Уменьшено для мобильных */
+		}
+		100% {
+			transform: translate(-50%, -50%) scale(1);
+			box-shadow: 0 0 0 0 rgba(88, 174, 255, 0);
+		}
 	}
-	
-	.navbar-brand {
-		font-size: 16px;
-	}
-	
-	.nav-link {
-		padding: 10px 15px;
-		font-size: 14px;
-	}
-	.container-avto {
-		padding: 20px 10px;
-	}
-	
-	/* Скрываем изображение ноутбука на мобильных */
-	.laptop-img {
-		display: none;
-	}
-	
-	.screen-background {
-		position: relative;
-		width: 100%;
-		height: auto;
-		min-height: 600px;
-		top: 0;
-		left: 0;
-		transform: none;
-		border-radius: 8px;
-		margin-bottom: 20px;
-	}
-	
-	.screen-content {
-		position: relative;
-		width: 100%;
-		height: auto;
-		top: 0;
-		left: 0;
-		transform: none;
-		display: flex;
-		flex-direction: column;
-		padding: 20px 15px;
-		background: rgba(255, 255, 255, 0.95);
-		border-radius: 8px;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-	}
-	
-	.screen-content h1 {
-		font-size: 20px;
-		margin-bottom: 25px;
-		text-align: center;
-		line-height: 1.3;
-	}
-	
-	.avto-list {
-		margin-bottom: 30px;
-		gap: 12px;
-	}
-	
-	.avto-item {
-		width: 100%;
-		height: 50px;
-		gap: 12px;
-	}
-	
-	.avto-icon {
-		width: 45px;
-		height: 45px;
-		flex-shrink: 0;
-	}
-	
-	.avto-icon img {
-		width: 28px;
-		height: 26px;
-	}
-	
-	.avto-text {
-		font-size: 13px;
-		line-height: 1.4;
-		flex: 1;
-	}
-	
-	.integration-section {
-		align-items: center;
-	}
-	
-	.integration-item {
-		width: 100%;
-		height: 50px;
-		gap: 12px;
-		margin-bottom: 20px;
-	}
-	
-	.phone-container {
-		width: 280px;
-		height: 180px;
-		margin: 20px auto 0;
-	}
-	
-	.phone-img {
-		width: 120px;
-		height: auto;
-		bottom: 20px;
-		right: 20px;
-	}
-	
-	.app-icon {
-		width: 28px;
-		height: 27px;
-		border-radius: 8px;
-	}
-	
-	/* Позиционирование иконок приложений для мобильной версии */
-	.app-icon:nth-child(1) { top: 10px; right: 60px; }
-	.app-icon:nth-child(2) { top: 10px; right: 20px; }
-	.app-icon:nth-child(3) { top: 45px; right: 80px; }
-	.app-icon:nth-child(4) { top: 45px; right: 40px; }
-	.app-icon:nth-child(5) { top: 80px; right: 60px; }
-	.app-icon:nth-child(6) { top: 80px; right: 20px; }
-	.app-icon:nth-child(7) { top: 115px; right: 80px; }
-	.app-icon:nth-child(8) { top: 115px; right: 40px; }
-	.app-icon:nth-child(9) { top: 150px; right: 60px; }
-	.app-icon:nth-child(10) { top: 150px; right: 20px; }
-	.app-icon:nth-child(11) { top: 20px; left: 20px; }
-	.app-icon:nth-child(12) { top: 60px; left: 20px; }
 }
