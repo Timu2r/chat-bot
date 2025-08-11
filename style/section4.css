@@ -172,26 +172,26 @@
 
 		/* Individual icon, vector, h2, p positions (scaled) - UPDATED */
 		.icon-1 { top: -21px; left: 84px; }
-		.main-vector1 { top: 7px; left: 106.4px; }
+		.main-vector1 { top: 7px; left: 106.4px; width: 45px; }
 		.metca-1 h2 { top: -56px; }
 		.metca-1 p { left: 175px; top: 14px; }
 
 		.icon-2 { top: 119px; left: 336px; }
-		.main-vector2 { top: 140px; left: 356.3px; }
+		.main-vector2 { top: 142px; left: 356.6px; width: 45px; }
 		.metca-2 h2 { top: 77px; left: 280px; }
 		.metca-2 p { top: 140px; left: 427px; }
 
 		.icon-3 { top: 308px; left: 35px; }
-		.main-vector3 { top: 329px; left: 59.5px; }
+		.main-vector3 { top: 329px; left: 56px; width: 45px; }
 		.metca-3 h2 { top: 266px; left: -14px; }
 		.metca-3 p { top: 336px; left: 126px; }
 
 		.icon-4 { top: 238px; left: 546px; }
-		.main-vector4 { top: 259px; left: 563.5px; }
+		.main-vector4 { top: 259px; left: 563.5px; width: 55px; }
 		.metca-4 h2 { top: 182px; left: 490px; }
 		.metca-4 p { top: 280px; left: 644px; }
 
-		.main-vector5 { top: 35px; left: 49px; }
+		.main-vector5 { top: 35px; left: 49px; width: 45px; }
 		.metca-5 h2 { top: -21px; left: -21px; }
 		.metca-5 p { top: 42px; left: 126px; }
 	}
