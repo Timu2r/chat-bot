@@ -245,7 +245,6 @@ body {
 	bottom: 65px;
 	z-index: 1;
 	transition: all 0.2s;
-	opacity: 0;
 }
 
 .decorative-tooltip {
