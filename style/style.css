@@ -351,6 +351,18 @@ body {
 	z-index: 100;
 }
 
+.decorative-vibrate-icon {
+  animation: vibrate 1.5s infinite ease-in-out;
+}
+
+@keyframes vibrate {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+}
+
 /* Показываем Tooltip при нажатии на иконку */
 .decorative-icon:active ~ .decorative-tooltip {
 	opacity: 1;
@@ -364,7 +376,7 @@ body {
 }
 
 /* При наведении на иконку, скрываем волну */
-.decorative-icon:hover ~ .decorative-vector-icon {
+.decorative-icon:hover ~ .decorative-vibrate-icon {
 	opacity: 0;
 	visibility: hidden;
 	transform: scale(
@@ -434,6 +446,45 @@ body {
 .menu-left h2 {
 	color: #012547;
 	font-size: 26px;
+}
+
+.wave-container {
+	position: fixed;
+	right: 60px;
+	bottom: 50px;
+  width: 100px; /* Adjust to match your icon size */
+  height: 100px; /* Adjust to match your icon size */
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #007bff; /* Wave color */
+  opacity: 0;
+  animation: radiate 2s infinite; /* Adjust duration as needed */
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.5s; /* Offset the animation for subsequent waves */
+}
+
+.wave:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes radiate {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 /* --- MEDIA QUERIES --- */
