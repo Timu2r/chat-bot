@@ -62,7 +62,6 @@ body {
 	font-weight: 700;
 	font-style: Bold;
 	font-size: 120px;
-	leading-trim: NONE;
 	line-height: 88%;
 	letter-spacing: -4%;
 	vertical-align: middle;
@@ -91,7 +90,6 @@ body {
 	font-weight: 700;
 	font-style: Bold;
 	font-size: 48px;
-	leading-trim: NONE;
 	line-height: 124%;
 	letter-spacing: 2%;
 	vertical-align: middle;
@@ -387,7 +385,7 @@ body {
 }
 
 /* При наведении на иконку, показываем тултип */
-.decorative-icon:hover ~ .decorative-tooltip {
+.decorative-icon:active ~ .decorative-tooltip {
 	opacity: 1;
 	visibility: visible;
 }
