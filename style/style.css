@@ -229,112 +229,133 @@ body {
 	z-index: 99;
 }
 
+/*
+  =====================================
+  Анимации
+  =====================================
+*/
+
+/* Эта анимация отвечает за вибрацию и паузу.
+   Вибрация происходит в первые 11% цикла,
+   остальное время элемент неподвижен. */
+@keyframes vibrate-and-wait {
+  0% { transform: translate(0, 0); } /* Начало, без движения */
+  1% { transform: translate(1px, 1px) rotate(0deg); }
+  2% { transform: translate(-1px, -2px) rotate(-1deg); }
+  3% { transform: translate(-3px, 0px) rotate(1deg); }
+  4% { transform: translate(3px, 2px) rotate(0deg); }
+  5% { transform: translate(1px, -1px) rotate(1deg); }
+  6% { transform: translate(-1px, 2px) rotate(-1deg); }
+  7% { transform: translate(-3px, 1px) rotate(0deg); }
+  8% { transform: translate(3px, 1px) rotate(-1deg); }
+  9% { transform: translate(-1px, -1px) rotate(1deg); }
+  10% { transform: translate(1px, 2px) rotate(0deg); }
+  11% { transform: translate(0, 0); } /* Конец вибрации */
+  100% { transform: translate(0, 0); } /* Ожидание до 15 секунд */
+}
+
+/* Эта анимация отвечает за появление и исчезновение волны.
+   Она работает синхронно с вибрацией. */
+@keyframes wave-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  } /* Скрыто и уменьшено */
+  1% {
+    opacity: 1;
+    transform: scale(1);
+  } /* Появляется вместе с вибрацией */
+  10% {
+    opacity: 1;
+    transform: scale(1);
+  } /* Волна полностью видна */
+  11% {
+    opacity: 0;
+    transform: scale(1.1);
+  } /* Исчезает в конце вибрации */
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  } /* Скрыто до следующего цикла */
+}
+
+/*
+  =====================================
+  Стили элементов
+  =====================================
+*/
+
+/* Основной иконочный элемент, который вибрирует */
 .decorative-icon {
-	position: fixed;
-	right: 40px;
-	bottom: 50px;
-	z-index: 1;
-	transition: all 0.2s;
-	cursor: pointer;
-	z-index: 99;
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  z-index: 99;
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: vibrate-and-wait 15s linear infinite;
 }
 
 .decorative-vector-icon {
-	position: fixed;
-	right: 20px;
-	bottom: 65px;
-	z-index: 1;
-	transition: all 0.2s;
+  position: fixed;
+  right: 20px;
+  bottom: 65px;
+  z-index: 1;
+  transition: all 0.2s;
+  animation: wave-appear 15s linear infinite;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* Tooltip */
 .decorative-tooltip {
-	padding: 8px 12px;
-	background: #ffffff;
-	color: rgb(0, 0, 0);
-	border-radius: 4px;
-	font-size: 14px;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.2s;
-	white-space: nowrap;
-	z-index: 10;
-	box-shadow: 1px 3px 12.5px 2px #1a90ff99;
+  position: fixed;
+  right: 60px; /* Позиция смещена, чтобы не перекрывать иконку */
+  bottom: 140px; /* Положение относительно иконки */
+  padding: 8px 16px;
+  background: #ffffff;
+  color: #012547;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #9bbfe8;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 100;
 }
 
-.decorative-tooltip::after {
-	content: '';
-	position: absolute;
-	left: -5px;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 0;
-	height: 0;
-}
-
-.decorative-tooltip {
-	position: fixed;
-	right: 0px;
-	bottom: 140px;
-	transform: translateX(
-		-50%
-	); /* This transform is redundant with 'right' positioning */
-	background: #ffffff;
-	padding: 8px 16px;
-	border-radius: 8px;
-	font-size: 14px;
-	color: #012547;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	border: 1px solid #9bbfe8;
-	white-space: nowrap;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.3s, visibility 0.3s;
-	z-index: 100;
-}
-
-.decorative-icon:active + .decorative-vector-icon,
+/* Показываем Tooltip при нажатии на иконку */
 .decorative-icon:active ~ .decorative-tooltip {
-	opacity: 1;
-	visibility: visible;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 
-
-.decorative-icon:active + .decorative-vector-icon #wave-path-1 {
-	animation: wave 1s ease-in-out forwards;
+.decorative-icon:hover {
+  /* Останавливаем анимацию вибрации */
+  animation-play-state: paused;
 }
 
-.decorative-icon:active + .decorative-vector-icon #wave-path-2 {
-	animation: wave 1s ease-in-out 0.2s forwards;
+/* При наведении на иконку, скрываем волну */
+.decorative-icon:hover ~ .decorative-vector-icon {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5); /* Добавляем небольшое уменьшение для плавного исчезновения */
+  transition: all 0.2s; /* Делаем исчезновение более плавным */
+  animation-play-state: paused; /* Останавливаем анимацию, чтобы не было неожиданных появлений */
 }
 
-.decorative-icon:active + .decorative-vector-icon #wave-path-3 {
-	animation: wave 1s ease-in-out 0.4s forwards;
+/* При наведении на иконку, показываем тултип */
+.decorative-icon:hover ~ .decorative-tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
-@keyframes wave {
-	to {
-		stroke-dashoffset: 0;
-	}
-}
-
-
-
-@keyframes vibrate {
-	0% {
-		transform: rotate(0deg);
-	}
-	25% {
-		transform: rotate(4deg);
-	}
-	50% {
-		transform: rotate(0deg);
-	}
-	75% {
-		transform: rotate(-4deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
+/* Правило для active состояния (нажатие) можно сохранить, если нужно */
+.decorative-icon:active ~ .decorative-tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 .drop-menu {
